@@ -55,6 +55,6 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     "import/no-unresolved": [2, { commonjs: true, amd: true }]
   },
-  ignorePatterns: ["__test__/**/*", ".eslintrc.js", "types"],
+  ignorePatterns: ["__test__/**/*", ".eslintrc.js", "*.d.ts"],
   globals: { React: "writable" }
 };

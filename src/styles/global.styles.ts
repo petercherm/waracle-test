@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle(({ theme }) => ({
   body: {
-    color: "black",
-    backgroundColor: "white",
+    color: theme.colors.primaryTextColor,
+    backgroundColor: theme.colors.backgroundColor,
     fontFamily: "Arial, Helvetica, sans-serif",
     fontSize: 10
   }

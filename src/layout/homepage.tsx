@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "./homepage.styles";
 
 export const Homepage = () => {
   return (
-    <div>
+    <Container>
       <p>WARACLE TEST APP</p>
-    </div>
+    </Container>
   );
 };
