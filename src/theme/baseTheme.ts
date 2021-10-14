@@ -5,20 +5,24 @@ export const baseTheme = {
     primaryTextColor: "#000",
     primaryColor: "#666",
     hightLightColor: "#f00",
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    headerColor: "#ddd"
   },
   sizes: {
-    small: 5,
-    medium: 10,
-    large: 20,
-    xLarge: 30
+    small: "0.5rem",
+    medium: "1rem",
+    large: "2rem",
+    xLarge: "3rem"
   },
   fontSizes: {
     xSmall: "0.8rem",
     small: "1rem",
     medium: "1.2rem",
-    large: "1.5rem",
+    large: "1.4rem",
     xlarge: "1.8rem"
+  },
+  widths: {
+    maxContentWidth: 1280
   },
   mediaQuery
 };
