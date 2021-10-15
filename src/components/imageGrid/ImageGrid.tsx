@@ -6,9 +6,14 @@ import { ImageGridContainer } from "./ImageGrid.styles";
 export interface ImageGridProps {
   images: ImageType[];
   fetchStatus: FetchStatus;
+  onUploadImage: () => void;
 }
 
-export const ImageGrid = ({ images, fetchStatus }: ImageGridProps) => {
+export const ImageGrid = ({
+  images,
+  fetchStatus,
+  onUploadImage
+}: ImageGridProps) => {
   const { isFetching, isError, error } = fetchStatus;
 
   if (isError) {
@@ -23,7 +28,7 @@ export const ImageGrid = ({ images, fetchStatus }: ImageGridProps) => {
           : "It looks like you haven't uploaded any images yet"}
       </p>
       <ImageGridContainer>
-        <AddImage />
+        <AddImage onUploadImage={onUploadImage} />
       </ImageGridContainer>
     </>
   );

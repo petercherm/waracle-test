@@ -1,4 +1,4 @@
-import { requestImages } from "../imageActions";
+import { requestImagesAction } from "../imageActions";
 import {
   imagesInitialState,
   imagesReducer,
@@ -17,7 +17,7 @@ describe("GIVEN imagesReducer", () => {
       }
     };
 
-    expect(imagesReducer(initialState, requestImages.request())).toEqual(
+    expect(imagesReducer(initialState, requestImagesAction.request())).toEqual(
       expectedState
     );
   });
@@ -41,7 +41,7 @@ describe("GIVEN imagesReducer", () => {
     };
 
     expect(
-      imagesReducer(initialState, requestImages.success([mockResponse]))
+      imagesReducer(initialState, requestImagesAction.success([mockResponse]))
     ).toEqual(expectedState);
   });
 
@@ -56,7 +56,10 @@ describe("GIVEN imagesReducer", () => {
     };
 
     expect(
-      imagesReducer(initialState, requestImages.failure({ error: "Error" }))
+      imagesReducer(
+        initialState,
+        requestImagesAction.failure({ error: "Error" })
+      )
     ).toEqual(expectedState);
   });
 });

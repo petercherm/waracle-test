@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Header } from "../components/header/Header";
 import { ImageGrid } from "../components/imageGrid/ImageGrid";
-import { requestImages } from "../state/images/imageActions";
+import { requestImagesAction } from "../state/images/imageActions";
 import {
   getImages,
   getImagesFetchStatus
 } from "../state/images/imageSelectors";
+import { uploadImageAction } from "../state/upload/uploadActions";
 import { Container, ContentContainer } from "./homepage.styles";
 
 export const Homepage = () => {
@@ -15,14 +16,23 @@ export const Homepage = () => {
   const fetchStatus = useSelector(getImagesFetchStatus);
 
   useEffect(() => {
-    dispatch(requestImages.request());
+    dispatch(requestImagesAction.request());
   }, [dispatch]);
+
+  const handleUploadImage = () => {
+    console.debug("UPLOAD_IMAGE");
+    dispatch(uploadImageAction.request());
+  };
 
   return (
     <Container>
       <Header />
       <ContentContainer>
-        <ImageGrid images={images} fetchStatus={fetchStatus} />
+        <ImageGrid
+          images={images}
+          fetchStatus={fetchStatus}
+          onUploadImage={handleUploadImage}
+        />
       </ContentContainer>
     </Container>
   );

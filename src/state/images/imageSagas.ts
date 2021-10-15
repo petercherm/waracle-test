@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from "redux-saga/effects";
-import { requestImages } from "./imageActions";
+import { requestImagesAction } from "./imageActions";
 import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
 import { getType } from "typesafe-actions";
@@ -7,9 +7,9 @@ import { getType } from "typesafe-actions";
 function* fetchImages() {
   const { response, error } = yield call(performFetch);
   if (response) {
-    yield put(requestImages.success(response));
+    yield put(requestImagesAction.success(response));
   } else if (error) {
-    yield put(requestImages.failure(error));
+    yield put(requestImagesAction.failure(error));
   }
 }
 
@@ -22,5 +22,5 @@ const performFetch = () => {
 };
 
 export function* requestImagesSaga() {
-  yield takeEvery(getType(requestImages.request), fetchImages);
+  yield takeEvery(getType(requestImagesAction.request), fetchImages);
 }

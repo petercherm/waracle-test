@@ -1,6 +1,6 @@
 import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
-import { requestImages } from "./imageActions";
+import { requestImagesAction } from "./imageActions";
 
 export interface ImagesState {
   items: any[];
@@ -19,29 +19,23 @@ export const imagesInitialState: ImagesState = {
 export const imagesReducer = createReducer<ImagesState, RootAction>(
   imagesInitialState
 )
-  .handleAction(requestImages.request, (state) => ({
+  .handleAction(requestImagesAction.request, (state) => ({
     ...state,
     status: {
-      ...state.status,
-      isFetching: true,
-      isError: false
+      ...imagesInitialState.status,
+      isFetching: true
     }
   }))
-  .handleAction(requestImages.success, (state, action) => ({
+  .handleAction(requestImagesAction.success, (state, action) => ({
     ...state,
     items: action.payload,
-    status: {
-      ...state.status,
-      isFetching: false,
-      isError: false
-    }
+    status: imagesInitialState.status
   }))
-  .handleAction(requestImages.failure, (state, action) => ({
+  .handleAction(requestImagesAction.failure, (state, action) => ({
     ...state,
     items: [],
     status: {
-      ...state.status,
-      isFetching: false,
+      ...imagesInitialState.status,
       isError: true,
       error: action.payload.error
     }

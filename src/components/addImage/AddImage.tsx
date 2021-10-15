@@ -1,5 +1,9 @@
 import { AddImageContainer } from "./AddImage.styles";
 
-export const AddImage = () => {
-  return <AddImageContainer />;
+export interface AddImageProps {
+  onUploadImage: () => void;
+}
+
+export const AddImage = ({ onUploadImage }: AddImageProps) => {
+  return <AddImageContainer onClick={onUploadImage} />;
 };
