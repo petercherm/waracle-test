@@ -2,8 +2,12 @@ import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
 import { requestFavouritesAction } from "./favouriteActions";
 
+export interface FavouriteItem {
+  id: string;
+  imageId: string;
+}
 export interface FavouritesState {
-  items: any[];
+  items: FavouriteItem[];
   status: FetchStatus;
 }
 
