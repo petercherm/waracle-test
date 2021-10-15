@@ -21,37 +21,41 @@ export const AddImageContainer = styled.li.attrs({ role: "button" })(
   })
 );
 
-export const AddImageTile = styled.div(({ theme }) => ({
-  backgroundColor: theme.colors.addImageColor,
-  border: `1px dashed ${theme.colors.primaryColor}`,
-  aspectRatio: `auto 1/1`,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  cursor: "pointer",
-  transition: "all 0.3s ease-in-out",
-  margin: `${theme.sizes.medium} ${theme.sizes.small}`,
-
-  ["&:hover"]: {
-    borderColor: theme.colors.hightLightColor,
-    backgroundColor: theme.colors.hoverBackgroundColor,
-
-    ["&::before"]: {
-      color: theme.colors.hightLightColor,
-      borderColor: theme.colors.hightLightColor
-    }
-  },
-
-  ["&::before"]: {
-    content: '"+"',
+export const AddImageTile = styled.div<{ isUploading: boolean }>(
+  ({ theme, isUploading }) => ({
+    backgroundColor: theme.colors.addImageColor,
+    border: `1px dashed ${theme.colors.primaryColor}`,
+    aspectRatio: `auto 1/1`,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: `calc(2* ${theme.fontSizes.xlarge})`,
-    width: "40%",
-    height: "40%",
-    borderRadius: "50%",
-    border: `1px dashed ${theme.colors.primaryColor}`,
-    transition: "all 0.3s ease-in-out"
-  }
-}));
+    cursor: "pointer",
+    transition: "all 0.3s ease-in-out",
+    margin: `${theme.sizes.medium} ${theme.sizes.small}`,
+
+    ["&:hover"]: {
+      borderColor: theme.colors.hightLightColor,
+      backgroundColor: theme.colors.hoverBackgroundColor,
+
+      ["&::before"]: {
+        color: theme.colors.hightLightColor,
+        borderColor: theme.colors.hightLightColor
+      }
+    },
+
+    ["&::before"]: {
+      content: isUploading ? '"Uploading..."' : '"+"',
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: isUploading
+        ? theme.fontSizes.small
+        : `calc(2* ${theme.fontSizes.xlarge})`,
+      width: "40%",
+      height: "40%",
+      borderRadius: "50%",
+      border: isUploading ? "none" : `1px dashed ${theme.colors.primaryColor}`,
+      transition: "all 0.3s ease-in-out"
+    }
+  })
+);

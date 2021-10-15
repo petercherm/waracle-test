@@ -21,6 +21,9 @@ export const ImageGrid = ({
     return <p>Something went wrong: {error}</p>;
   }
 
+  if (isFetching) {
+    return <p>Loading images...</p>;
+  }
   const renderImages = () =>
     images.map((image: ImageType) => (
       <ImageTile key={image.id} image={image} />

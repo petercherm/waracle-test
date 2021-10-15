@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+import { getImageUploadStatus } from "../../state/upload/uploadSelectors";
 import { AddImageContainer, AddImageTile } from "./AddImage.styles";
 
 export interface AddImageProps {
@@ -5,9 +7,11 @@ export interface AddImageProps {
 }
 
 export const AddImage = ({ onUploadImage }: AddImageProps) => {
+  const { isUploading } = useSelector(getImageUploadStatus);
+
   return (
     <AddImageContainer onClick={onUploadImage}>
-      <AddImageTile />
+      <AddImageTile isUploading={isUploading} />
     </AddImageContainer>
   );
 };
