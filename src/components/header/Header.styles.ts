@@ -13,10 +13,17 @@ export const HeaderContainer = styled.div(({ theme }) => ({
   display: "flex",
   textAlign: "left",
   alignItems: "center",
+  justifyContent: "center",
   backgroundColor: theme.colors.headerColor,
   padding: theme.sizes.medium,
   margin: 0,
   borderBottom: `1px solid ${theme.colors.primaryColor}`
+}));
+
+export const HeaderContent = styled.div(({ theme }) => ({
+  display: "flex",
+  width: "100%",
+  maxWidth: theme.widths.maxContentWidth
 }));
 
 export const Avatar = styled.img(({ theme }) => ({

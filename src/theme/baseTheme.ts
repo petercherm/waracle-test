@@ -11,6 +11,7 @@ export const baseTheme = {
     hoverBackgroundColor: "#ddd"
   },
   sizes: {
+    xSmall: "0.25rem",
     small: "0.5rem",
     medium: "1rem",
     large: "2rem",
