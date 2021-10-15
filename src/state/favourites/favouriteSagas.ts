@@ -1,8 +1,11 @@
 import { call, put, takeEvery } from "redux-saga/effects";
-import { requestFavouritesAction } from "./favouriteActions";
+import {
+  requestFavouritesAction,
+  setFavouriteAction
+} from "./favouriteActions";
 import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
-import { getType } from "typesafe-actions";
+import { ActionType, getType } from "typesafe-actions";
 
 function* fetchFavourites() {
   const { response, error } = yield call(performFetch);
@@ -13,14 +16,38 @@ function* fetchFavourites() {
   }
 }
 
+function* setFavourite(action: ActionType<typeof setFavouriteAction.request>) {
+  const { response, error } = yield call(performSet, action.payload.imageId);
+  if (response) {
+    yield put(setFavouriteAction.success(response));
+    yield put(requestFavouritesAction.request());
+  } else if (error) {
+    yield put(setFavouriteAction.failure({ error }));
+  }
+}
+
 const performFetch = () => {
   const api = new Request();
   return api
-    .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}?limit=50`)
+    .get(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}?limit=50`)
+    .then((response) => ({ response }))
+    .catch((error) => ({ error }));
+};
+
+const performSet = (image_id: string) => {
+  const api = new Request();
+  return api
+    .post(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}`, {
+      image_id
+    })
     .then((response) => ({ response }))
     .catch((error) => ({ error }));
 };
 
 export function* requestFavouritesSaga() {
   yield takeEvery(getType(requestFavouritesAction.request), fetchFavourites);
+}
+
+export function* setFavouritesSaga() {
+  yield takeEvery(getType(setFavouriteAction.request), setFavourite);
 }
