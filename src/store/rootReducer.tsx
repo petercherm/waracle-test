@@ -1,10 +1,10 @@
 import { StateType } from "typesafe-actions";
 import { combineReducers } from "@reduxjs/toolkit";
 
-import { sampleReducer } from "../state/sample/sampleReducer";
+import { imagesReducer } from "../state/images/imagesReducer";
 
 export const rootReducer = combineReducers({
-  sample: sampleReducer
+  images: imagesReducer
 });
 
 export type ApplicationState = StateType<ReturnType<typeof rootReducer>>;

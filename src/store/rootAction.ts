@@ -1,8 +1,8 @@
 import { ActionType } from "typesafe-actions";
-import * as sampleActions from "../state/sample/sampleActions";
+import * as imageActions from "../state/images/imageActions";
 
 const allActions = {
-  sampleActions
+  imageActions
 };
 
 type AllActions = typeof allActions;
