@@ -1,5 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
+import { getType } from "typesafe-actions";
+import { uploadImageAction } from "../state/upload/uploadActions";
 import { rootReducer } from "./rootReducer";
 import { rootSaga } from "./rootSaga";
 
@@ -7,7 +9,14 @@ const sagaMiddleware = createSagaMiddleware();
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => [
-    ...getDefaultMiddleware(),
+    ...getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [
+          getType(uploadImageAction.request),
+          getType(uploadImageAction.failure)
+        ]
+      }
+    }),
     sagaMiddleware
   ]
 });

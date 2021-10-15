@@ -1,6 +1,7 @@
 import { ImageType } from "../../models/theCatApi/image.models";
 import { FetchStatus } from "../../store/rootAction";
 import { AddImage } from "../addImage/AddImage";
+import { ImageTile } from "../imageTile/ImageTile";
 import { ImageGridContainer } from "./ImageGrid.styles";
 
 export interface ImageGridProps {
@@ -20,6 +21,11 @@ export const ImageGrid = ({
     return <p>Something went wrong: {error}</p>;
   }
 
+  const renderImages = () =>
+    images.map((image: ImageType) => (
+      <ImageTile key={image.id} image={image} />
+    ));
+
   return (
     <>
       <p>
@@ -28,6 +34,7 @@ export const ImageGrid = ({
           : "It looks like you haven't uploaded any images yet"}
       </p>
       <ImageGridContainer>
+        {renderImages()}
         <AddImage onUploadImage={onUploadImage} />
       </ImageGridContainer>
     </>

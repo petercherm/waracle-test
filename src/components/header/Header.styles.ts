@@ -11,6 +11,7 @@ export const SubHeading = styled.p(({ theme }) => ({
 
 export const HeaderContainer = styled.div(({ theme }) => ({
   display: "flex",
+  textAlign: "left",
   alignItems: "center",
   backgroundColor: theme.colors.headerColor,
   padding: theme.sizes.medium,

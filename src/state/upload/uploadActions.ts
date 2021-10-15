@@ -7,13 +7,13 @@ export enum UploadActionTypes {
 }
 
 interface RequestUploadFailure {
-  error: string;
+  error: { message: string };
 }
 
 export const uploadImageAction = createAsyncAction(
   UploadActionTypes.UPLOAD_IMAGE_REQUEST,
   UploadActionTypes.UPLOAD_IMAGE_SUCCESS,
   UploadActionTypes.UPLOAD_IMAGE_FAILURE
-)<undefined, undefined, RequestUploadFailure>();
+)<FormData, undefined, RequestUploadFailure>();
 
 export type UploadActions = ActionType<typeof uploadImageAction>;

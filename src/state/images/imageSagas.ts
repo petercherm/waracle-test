@@ -9,14 +9,14 @@ function* fetchImages() {
   if (response) {
     yield put(requestImagesAction.success(response));
   } else if (error) {
-    yield put(requestImagesAction.failure(error));
+    yield put(requestImagesAction.failure({ error }));
   }
 }
 
 const performFetch = () => {
   const api = new Request();
   return api
-    .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}`)
+    .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}?limit=50`)
     .then((response) => ({ response }))
     .catch((error) => ({ error }));
 };

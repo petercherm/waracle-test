@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AddImageContainer = styled.li.attrs({ role: "button" })(
   ({ theme }) => ({
-    width: "25%",
+    width: `calc(25% - 3 * ${theme.sizes.medium})`,
     backgroundColor: theme.colors.addImageColor,
     border: `1px dashed ${theme.colors.primaryColor}`,
     aspectRatio: `auto 1/1`,
@@ -11,6 +11,7 @@ export const AddImageContainer = styled.li.attrs({ role: "button" })(
     justifyContent: "center",
     cursor: "pointer",
     transition: "all 0.3s ease-in-out",
+    margin: `${theme.sizes.medium} ${theme.sizes.small}`,
 
     ["&:hover"]: {
       borderColor: theme.colors.hightLightColor,

@@ -37,6 +37,6 @@ export const imagesReducer = createReducer<ImagesState, RootAction>(
     status: {
       ...imagesInitialState.status,
       isError: true,
-      error: action.payload.error
+      error: action.payload.error.message
     }
   }));

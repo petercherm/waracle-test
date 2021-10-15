@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle(({ theme }) => ({
+  ["*"]: {
+    boxSizing: "border-box"
+  },
   html: {
     fontSize: 12,
     transition: `all 0.5s ease-in-out`,

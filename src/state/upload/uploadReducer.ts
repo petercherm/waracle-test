@@ -33,6 +33,6 @@ export const uploadReducer = createReducer<UploadState, RootAction>(
     status: {
       ...uploadInitialState.status,
       isError: true,
-      error: action.payload.error
+      error: action.payload.error.message
     }
   }));

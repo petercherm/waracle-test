@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ImageGridContainer = styled.ul({
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "flex-start",
+  flexWrap: "wrap",
   padding: 0
 });

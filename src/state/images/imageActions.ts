@@ -8,7 +8,7 @@ export enum ImageActionTypes {
 }
 
 interface RequestImagesFailure {
-  error: string;
+  error: { message: string };
 }
 
 export const requestImagesAction = createAsyncAction(

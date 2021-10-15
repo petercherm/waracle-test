@@ -58,7 +58,7 @@ describe("GIVEN imagesReducer", () => {
     expect(
       imagesReducer(
         initialState,
-        requestImagesAction.failure({ error: "Error" })
+        requestImagesAction.failure({ error: { message: "Error" } })
       )
     ).toEqual(expectedState);
   });

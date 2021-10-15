@@ -17,9 +17,9 @@ describe("GIVEN uploadReducer", () => {
       }
     };
 
-    expect(uploadReducer(initialState, uploadImageAction.request())).toEqual(
-      expectedState
-    );
+    expect(
+      uploadReducer(initialState, uploadImageAction.request({} as FormData))
+    ).toEqual(expectedState);
   });
 
   test("it handles the @upload/UPLOAD_IMAGE_SUCCESS correctly", () => {
@@ -43,7 +43,10 @@ describe("GIVEN uploadReducer", () => {
     };
 
     expect(
-      uploadReducer(initialState, uploadImageAction.failure({ error: "Error" }))
+      uploadReducer(
+        initialState,
+        uploadImageAction.failure({ error: { message: "Error" } })
+      )
     ).toEqual(expectedState);
   });
 });
