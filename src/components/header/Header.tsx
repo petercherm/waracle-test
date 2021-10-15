@@ -1,4 +1,3 @@
-import { ContentContainer } from "../../layout/homepage.styles";
 import {
   Avatar,
   HeaderContainer,

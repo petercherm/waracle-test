@@ -22,6 +22,7 @@ export const HeaderContainer = styled.div(({ theme }) => ({
 
 export const HeaderContent = styled.div(({ theme }) => ({
   display: "flex",
+  alignItems: "center",
   width: "100%",
   maxWidth: theme.widths.maxContentWidth
 }));
@@ -29,5 +30,5 @@ export const HeaderContent = styled.div(({ theme }) => ({
 export const Avatar = styled.img(({ theme }) => ({
   width: `calc(2 * ${theme.sizes.xLarge})`,
   height: `calc(2 * ${theme.sizes.xLarge})`,
-  marginRight: theme.sizes.large
+  marginRight: theme.sizes.medium
 }));

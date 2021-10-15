@@ -6,16 +6,24 @@ Object {
   "baseElement": <body>
     <div>
       <li
-        class="sc-bdfBQB iOgPAn"
+        class="sc-bdfBQB jvHSoF"
         role="button"
-      />
+      >
+        <div
+          class="sc-gsTEea gDYVLp"
+        />
+      </li>
     </div>
   </body>,
   "container": <div>
     <li
-      class="sc-bdfBQB iOgPAn"
+      class="sc-bdfBQB jvHSoF"
       role="button"
-    />
+    >
+      <div
+        class="sc-gsTEea gDYVLp"
+      />
+    </li>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Header } from "../components/header/Header";
 import { ImageGrid } from "../components/imageGrid/ImageGrid";
+import { requestFavouritesAction } from "../state/favourites/favouriteActions";
 import { requestImagesAction } from "../state/images/imageActions";
 import {
   getImages,
@@ -22,6 +23,7 @@ export const Homepage = () => {
 
   useEffect(() => {
     dispatch(requestImagesAction.request());
+    dispatch(requestFavouritesAction.request());
   }, [dispatch]);
 
   const handleAddImage = () => {

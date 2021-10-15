@@ -6,10 +6,42 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-dlfnuX bfYQAF"
+        class="sc-dlfnuX cWxwzt"
+      >
+        <div
+          class="sc-hKgJUU qSBqV"
+        >
+          <img
+            class="sc-eCstlR bXjXrC"
+            src="/petercherm_avatar.svg"
+          />
+          <div>
+            <h1
+              class="sc-bdfBQB hpjfw"
+              data-testid="header__heading--text"
+            >
+              WARACLE FRONT-END CHALLENGE
+            </h1>
+            <p
+              class="sc-gsTEea ebXGjM"
+              data-testid="header__subheading--text"
+            >
+              Peter Chermanowicz
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-dlfnuX cWxwzt"
+    >
+      <div
+        class="sc-hKgJUU qSBqV"
       >
         <img
-          class="sc-hKgJUU iEfwkk"
+          class="sc-eCstlR bXjXrC"
           src="/petercherm_avatar.svg"
         />
         <div>
@@ -26,30 +58,6 @@ Object {
             Peter Chermanowicz
           </p>
         </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="sc-dlfnuX bfYQAF"
-    >
-      <img
-        class="sc-hKgJUU iEfwkk"
-        src="/petercherm_avatar.svg"
-      />
-      <div>
-        <h1
-          class="sc-bdfBQB hpjfw"
-          data-testid="header__heading--text"
-        >
-          WARACLE FRONT-END CHALLENGE
-        </h1>
-        <p
-          class="sc-gsTEea ebXGjM"
-          data-testid="header__subheading--text"
-        >
-          Peter Chermanowicz
-        </p>
       </div>
     </div>
   </div>,
