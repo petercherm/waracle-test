@@ -9,7 +9,6 @@ import { store } from "./store/createStore";
 function App() {
   const themeName: ThemeName = process.env.REACT_APP_THEME as ThemeName;
   const theme = useMemo(() => getTheme(themeName), [themeName]);
-  console.debug(themeName);
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
