@@ -6,7 +6,9 @@ export const baseTheme = {
     primaryColor: "#666",
     hightLightColor: "#f00",
     backgroundColor: "#fff",
-    headerColor: "#ddd"
+    headerColor: "#ddd",
+    addImageColor: "#eee",
+    hoverBackgroundColor: "#ddd"
   },
   sizes: {
     small: "0.5rem",

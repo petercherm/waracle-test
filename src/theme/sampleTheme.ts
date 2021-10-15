@@ -6,6 +6,6 @@ import { Theme } from ".";
 
 export const sampleTheme: DeepPartial<Theme> = {
   colors: {
-    hightLightColor: "#00f"
+    hightLightColor: "#900"
   }
 };

@@ -1,3 +1,5 @@
 import { ApplicationState } from "../../store/rootReducer";
 
-export const getCatImages = (state: ApplicationState) => state.images.items;
+export const getImages = (state: ApplicationState) => state.images.items;
+export const getImagesFetchStatus = (state: ApplicationState) =>
+  state.images.status;
