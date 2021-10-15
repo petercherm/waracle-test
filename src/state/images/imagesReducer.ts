@@ -31,6 +31,7 @@ export const imagesReducer = createReducer<ImagesState, RootAction>(
     ...state,
     items: action.payload,
     status: {
+      ...state.status,
       isFetching: false,
       isError: false
     }
@@ -39,8 +40,9 @@ export const imagesReducer = createReducer<ImagesState, RootAction>(
     ...state,
     items: [],
     status: {
+      ...state.status,
       isFetching: false,
-      isError: true
-    },
-    error: action.payload
+      isError: true,
+      error: action.payload.error
+    }
   }));
