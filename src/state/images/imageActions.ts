@@ -1,4 +1,5 @@
 import { ActionType, createAsyncAction } from "typesafe-actions";
+import { ImageResponse } from "../../models/theCatApi/image.models";
 
 export enum ImageActions {
   FETCH_IMAGES_REQUEST = "@fetch/FETCH_IMAGES_REQUEST",
@@ -14,6 +15,6 @@ export const requestImages = createAsyncAction(
   ImageActions.FETCH_IMAGES_REQUEST,
   ImageActions.FETCH_IMAGES_SUCCESS,
   ImageActions.FETCH_IMAGES_FAILURE
-)<undefined, any[], RequestImagesFailure>();
+)<undefined, ImageResponse, RequestImagesFailure>();
 
 export type CatActions = ActionType<typeof requestImages>;
