@@ -1,6 +1,6 @@
-import { RootAction } from "../../store/rootAction";
+import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
-import { FetchStatus, requestImages } from "./imageActions";
+import { requestImages } from "./imageActions";
 
 export interface ImagesState {
   items: any[];

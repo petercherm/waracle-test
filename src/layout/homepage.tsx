@@ -1,23 +1,15 @@
-import React, { useCallback, useEffect, useMemo } from "react";
-import { endpoints } from "../api/endpoints";
-import { Request } from "../api/request";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Header } from "../components/header/Header";
+import { requestImages } from "../state/images/imageActions";
 import { Container, ContentContainer } from "./homepage.styles";
 
 export const Homepage = () => {
-  const api = useMemo(() => new Request(), []);
-
-  const fetchCats = useCallback(async () => {
-    const cats = await api.get(
-      `${process.env.REACT_APP_API_URL}${endpoints.IMAGES}`
-    );
-
-    console.debug("CATS", cats);
-  }, [api]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchCats();
-  }, [fetchCats]);
+    dispatch(requestImages.request());
+  }, [dispatch]);
 
   return (
     <Container>

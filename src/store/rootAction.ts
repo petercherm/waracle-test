@@ -8,3 +8,9 @@ const allActions = {
 type AllActions = typeof allActions;
 
 export type RootAction = ActionType<AllActions>;
+
+export interface FetchStatus {
+  isFetching: boolean;
+  isError: boolean;
+  error?: string;
+}
