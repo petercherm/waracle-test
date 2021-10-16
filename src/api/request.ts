@@ -55,7 +55,6 @@ export class Request {
   private getRequestParams(method: HttpMethod) {
     return {
       method,
-      mode: "cors" as RequestMode,
       cache: "no-cache" as RequestCache,
       credentials: "same-origin" as RequestCredentials,
       redirect: "follow" as RequestRedirect,

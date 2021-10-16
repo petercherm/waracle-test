@@ -24,15 +24,8 @@ describe("GIVEN favouritesReducer", () => {
 
   test("it handles the @fetch/FETCH_FAVOURITES_SUCCESS correctly", () => {
     const mockResponse = {
-      breed_ids: null,
-      breeds: [],
-      created_at: "2021-10-15T01:17:52.000Z",
-      height: 3024,
-      id: "geQomtavn",
-      original_filename: "F228D6F8-2E6D-4E43-85EE-4275CD9E75A3.jpeg",
-      sub_id: "demo-4e5577",
-      url: "https://cdn2.thecatapi.com/images/geQomtavn.jpg",
-      width: 4032
+      id: 1120,
+      imageId: "MTkyNTIwMA"
     };
 
     const expectedState: FavouritesState = {
@@ -42,7 +35,10 @@ describe("GIVEN favouritesReducer", () => {
 
     expect(
       favouritesReducer(
-        initialState,
+        {
+          ...initialState,
+          status: { ...initialState.status, isFetching: true }
+        },
         requestFavouritesAction.success([mockResponse])
       )
     ).toEqual(expectedState);
@@ -60,7 +56,10 @@ describe("GIVEN favouritesReducer", () => {
 
     expect(
       favouritesReducer(
-        initialState,
+        {
+          ...initialState,
+          status: { ...initialState.status, isFetching: true }
+        },
         requestFavouritesAction.failure({ error: { message: "Error" } })
       )
     ).toEqual(expectedState);

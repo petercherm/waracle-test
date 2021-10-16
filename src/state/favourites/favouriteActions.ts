@@ -24,7 +24,8 @@ interface SetFavouriteRequest {
 }
 
 interface UnsetFavouriteRequest {
-  favouriteId: string;
+  favouriteId: number;
+  imageId: string;
 }
 
 export const requestFavouritesAction = createAsyncAction(

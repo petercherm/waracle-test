@@ -1,20 +1,30 @@
 import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
-import { requestFavouritesAction } from "./favouriteActions";
+import {
+  requestFavouritesAction,
+  setFavouriteAction,
+  unsetFavouriteAction
+} from "./favouriteActions";
 
 export interface FavouriteItem {
-  id: string;
+  id: number;
   imageId: string;
+}
+export interface FavouritesStatus extends FetchStatus {
+  updatingImageId: string;
+  isUpdating: boolean;
 }
 export interface FavouritesState {
   items: FavouriteItem[];
-  status: FetchStatus;
+  status: FavouritesStatus;
 }
 
 export const favouritesInitialState: FavouritesState = {
   items: [],
   status: {
     isFetching: false,
+    isUpdating: false,
+    updatingImageId: "",
     isError: false,
     error: ""
   }
@@ -37,10 +47,31 @@ export const favouritesReducer = createReducer<FavouritesState, RootAction>(
   }))
   .handleAction(requestFavouritesAction.failure, (state, action) => ({
     ...state,
-    items: [],
     status: {
       ...favouritesInitialState.status,
       isError: true,
       error: action.payload.error.message
     }
-  }));
+  }))
+  .handleAction(
+    [setFavouriteAction.request, unsetFavouriteAction.request],
+    (state, action) => ({
+      ...state,
+      status: {
+        ...state.status,
+        isUpdating: true,
+        updatingImageId: action.payload.imageId
+      }
+    })
+  )
+  .handleAction(
+    [setFavouriteAction.success, setFavouriteAction.failure],
+    (state) => ({
+      ...state,
+      status: {
+        ...state.status,
+        isUpdating: false,
+        updatingImageId: ""
+      }
+    })
+  );

@@ -4,8 +4,14 @@ import {
   setFavouriteAction,
   unsetFavouriteAction
 } from "../../state/favourites/favouriteActions";
-import { getFavourites } from "../../state/favourites/favouriteSelectors";
-import { FavouriteItem } from "../../state/favourites/favouritesReducer";
+import {
+  getFavourites,
+  getFavouritesStatus
+} from "../../state/favourites/favouriteSelectors";
+import {
+  FavouriteItem,
+  FavouritesStatus
+} from "../../state/favourites/favouritesReducer";
 import { FavouriteIcon } from "../favouriteIcon/FavouriteIcon";
 import {
   ImageTileItem,
@@ -21,14 +27,23 @@ export interface ImageTileProps {
 export const ImageTile = ({ image }: ImageTileProps) => {
   const dispatch = useDispatch();
   const favourites: FavouriteItem[] = useSelector(getFavourites);
+  const favouritesStatus: FavouritesStatus = useSelector(getFavouritesStatus);
   const favourite = favourites.find(
     (favourite: FavouriteItem) => favourite.imageId === image.id
   );
   const isFavourite = Boolean(favourite);
+  const isFavouritesUpdating = favouritesStatus.isUpdating;
+  const isCurrentFavouriteUpdaing =
+    favouritesStatus.updatingImageId == image.id;
 
   const handleToggleFavourite = () => {
     if (favourite) {
-      dispatch(unsetFavouriteAction.request({ favouriteId: favourite.id }));
+      dispatch(
+        unsetFavouriteAction.request({
+          favouriteId: favourite.id,
+          imageId: favourite.imageId
+        })
+      );
     } else {
       dispatch(setFavouriteAction.request({ imageId: image.id }));
     }
@@ -41,6 +56,8 @@ export const ImageTile = ({ image }: ImageTileProps) => {
         <ImageFunctionBarContainer>
           <FavouriteIcon
             isFavourite={isFavourite}
+            isDisabled={isFavouritesUpdating}
+            isUpdating={isCurrentFavouriteUpdaing}
             onToggleFavourite={handleToggleFavourite}
           />
         </ImageFunctionBarContainer>

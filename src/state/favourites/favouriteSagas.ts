@@ -69,7 +69,7 @@ const performSet = (image_id: string) => {
     .catch((error) => ({ error }));
 };
 
-const performUnset = (favouriteId: string) => {
+const performUnset = (favouriteId: number) => {
   const api = new Request();
   return api
     .delete(
