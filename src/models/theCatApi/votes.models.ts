@@ -1,4 +1,4 @@
-export interface VotesResponse {
+export interface VotesType {
   country_code: string | null;
   created_at: string;
   id: number;
@@ -6,3 +6,5 @@ export interface VotesResponse {
   sub_id: string | null;
   value: number;
 }
+
+export type VoteResponse = VotesType[];

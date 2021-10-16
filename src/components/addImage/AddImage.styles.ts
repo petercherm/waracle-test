@@ -29,19 +29,22 @@ export const AddImageTile = styled.div<{ isUploading: boolean }>(
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    cursor: "pointer",
+    cursor: isUploading ? "not-allowed" : "pointer",
     transition: "all 0.3s ease-in-out",
     margin: `${theme.sizes.medium} ${theme.sizes.small}`,
+    pointerEvents: isUploading ? "none" : "all",
 
-    ["&:hover"]: {
-      borderColor: theme.colors.hightLightColor,
-      backgroundColor: theme.colors.hoverBackgroundColor,
+    ["&:hover"]: !isUploading
+      ? {
+          borderColor: theme.colors.hightLightColor,
+          backgroundColor: theme.colors.hoverBackgroundColor,
 
-      ["&::before"]: {
-        color: theme.colors.hightLightColor,
-        borderColor: theme.colors.hightLightColor
-      }
-    },
+          ["&::before"]: {
+            color: theme.colors.hightLightColor,
+            borderColor: theme.colors.hightLightColor
+          }
+        }
+      : {},
 
     ["&::before"]: {
       content: isUploading ? '"Uploading..."' : '"+"',

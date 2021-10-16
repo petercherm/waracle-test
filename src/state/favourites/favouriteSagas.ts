@@ -13,14 +13,14 @@ import { FavouriteItem } from "./favouritesReducer";
 function* fetchFavourites() {
   const { response, error } = yield call(performFetch);
   if (response) {
-    // NOTE: we don't need the entire response, just the image IDs
-    const imageIds: FavouriteItem[] = response.reduce(
+    // NOTE: we don't need the entire response, just the IDs
+    const favouriteIds: FavouriteItem[] = response.reduce(
       (acc: FavouriteItem[], curr: FavouritesType) => {
         return [...acc, { id: curr.id, imageId: curr.image_id }];
       },
       []
     );
-    yield put(requestFavouritesAction.success(imageIds));
+    yield put(requestFavouritesAction.success(favouriteIds));
   } else if (error) {
     yield put(requestFavouritesAction.failure({ error }));
   }

@@ -9,6 +9,7 @@ import {
   getImagesFetchStatus
 } from "../state/images/imageSelectors";
 import { uploadImageAction } from "../state/upload/uploadActions";
+import { requestVotesAction } from "../state/votes/voteActions";
 import {
   Container,
   ContentContainer,
@@ -24,6 +25,7 @@ export const Homepage = () => {
   useEffect(() => {
     dispatch(requestImagesAction.request());
     dispatch(requestFavouritesAction.request());
+    dispatch(requestVotesAction.request());
   }, [dispatch]);
 
   const handleAddImage = () => {

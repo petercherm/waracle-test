@@ -10,7 +10,7 @@ export const AddImage = ({ onUploadImage }: AddImageProps) => {
   const { isUploading } = useSelector(getImageUploadStatus);
 
   return (
-    <AddImageContainer onClick={onUploadImage}>
+    <AddImageContainer {...(!isUploading && { onClick: onUploadImage })}>
       <AddImageTile isUploading={isUploading} />
     </AddImageContainer>
   );

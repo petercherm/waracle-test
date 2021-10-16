@@ -4,11 +4,13 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { imagesReducer } from "../state/images/imagesReducer";
 import { uploadReducer } from "../state/upload/uploadReducer";
 import { favouritesReducer } from "../state/favourites/favouritesReducer";
+import { votesReducer } from "../state/votes/votesReducer";
 
 export const rootReducer = combineReducers({
   images: imagesReducer,
   upload: uploadReducer,
-  favourites: favouritesReducer
+  favourites: favouritesReducer,
+  votes: votesReducer
 });
 
 export type ApplicationState = StateType<ReturnType<typeof rootReducer>>;

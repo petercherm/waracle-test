@@ -6,6 +6,7 @@ import {
 } from "../state/favourites/favouriteSagas";
 import { requestImagesSaga } from "../state/images/imageSagas";
 import { uploadImageSaga } from "../state/upload/uploadSagas";
+import { requestVotesSaga, setVoteSaga } from "../state/votes/voteSagas";
 
 export function* rootSaga() {
   yield all([
@@ -13,6 +14,8 @@ export function* rootSaga() {
     uploadImageSaga(),
     requestFavouritesSaga(),
     setFavouritesSaga(),
-    unsetFavouritesSaga()
+    unsetFavouritesSaga(),
+    requestVotesSaga(),
+    setVoteSaga()
   ]);
 }
