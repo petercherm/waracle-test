@@ -9,6 +9,7 @@
 
 ## How to run it
 
+- copy `.env.example` in the root folder to `.env` (it already contains my API KEY for your convenience, but you can use yours)
 - run `npm install`
 - run `npm start` (that will stary the dev build)
 - you can also run a production build by typing `npm run build` and then starting the server with `serve -s build` (`serve` needs to be installed in your system first)
