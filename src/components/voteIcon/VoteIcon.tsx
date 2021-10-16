@@ -1,4 +1,3 @@
-import { Vote } from "../vote/Vote";
 import { VoteIconContainer } from "./VoteIcon.styles";
 
 export enum VoteType {
