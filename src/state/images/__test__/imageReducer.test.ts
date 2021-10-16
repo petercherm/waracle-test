@@ -41,7 +41,13 @@ describe("GIVEN imagesReducer", () => {
     };
 
     expect(
-      imagesReducer(initialState, requestImagesAction.success([mockResponse]))
+      imagesReducer(
+        {
+          ...initialState,
+          status: { ...initialState.status, isFetching: true }
+        },
+        requestImagesAction.success([mockResponse])
+      )
     ).toEqual(expectedState);
   });
 
@@ -57,7 +63,10 @@ describe("GIVEN imagesReducer", () => {
 
     expect(
       imagesReducer(
-        initialState,
+        {
+          ...initialState,
+          status: { ...initialState.status, isFetching: true }
+        },
         requestImagesAction.failure({ error: { message: "Error" } })
       )
     ).toEqual(expectedState);

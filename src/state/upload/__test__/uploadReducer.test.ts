@@ -27,9 +27,15 @@ describe("GIVEN uploadReducer", () => {
       ...initialState
     };
 
-    expect(uploadReducer(initialState, uploadImageAction.success())).toEqual(
-      expectedState
-    );
+    expect(
+      uploadReducer(
+        {
+          ...initialState,
+          status: { ...initialState.status, isUploading: true }
+        },
+        uploadImageAction.success()
+      )
+    ).toEqual(expectedState);
   });
 
   test("it handles the @upload/UPLOAD_IMAGE_FAILURE correctly", () => {
@@ -44,7 +50,10 @@ describe("GIVEN uploadReducer", () => {
 
     expect(
       uploadReducer(
-        initialState,
+        {
+          ...initialState,
+          status: { ...initialState.status, isUploading: true }
+        },
         uploadImageAction.failure({ error: { message: "Error" } })
       )
     ).toEqual(expectedState);
