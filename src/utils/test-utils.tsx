@@ -4,8 +4,8 @@ import { render, RenderResult } from "@testing-library/react";
 import { FunctionComponent } from "react";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { getTheme, ThemeName } from "../theme";
 import { ThemeProvider } from "styled-components";
+import { baseTheme } from "../theme/baseTheme";
 
 const customRender = (
   ui: JSX.Element,
@@ -16,11 +16,9 @@ const customRender = (
   }: any = {}
 ): RenderResult => {
   const Wrapper: FunctionComponent = ({ children }) => {
-    const themeName: ThemeName = process.env.NEXT_PUBLIC_THEME as ThemeName;
-    const theme = getTheme(themeName);
     return (
       <Provider store={store}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={baseTheme}>{children}</ThemeProvider>
       </Provider>
     );
   };

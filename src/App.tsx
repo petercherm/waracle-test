@@ -1,17 +1,14 @@
-import React, { useMemo } from "react";
 import { ThemeProvider } from "styled-components";
 import { Homepage } from "./layout/homepage";
-import { getTheme, ThemeName } from "./theme";
 import { GlobalStyle } from "./styles/global.styles";
 import { Provider } from "react-redux";
 import { store } from "./store/createStore";
+import { baseTheme } from "./theme/baseTheme";
 
 function App() {
-  const themeName: ThemeName = process.env.REACT_APP_THEME as ThemeName;
-  const theme = useMemo(() => getTheme(themeName), [themeName]);
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={baseTheme}>
         <GlobalStyle />
         <Homepage />
       </ThemeProvider>

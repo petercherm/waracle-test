@@ -1,4 +1,4 @@
-import axios, { AxiosRequestHeaders } from "axios";
+import axios, { AxiosRequestHeaders, AxiosResponse } from "axios";
 import axiosRetry, { exponentialDelay } from "axios-retry";
 import { HttpMethod } from "../models/api";
 
@@ -37,7 +37,7 @@ export class Request {
       .catch(this.handleError);
   }
 
-  private async handleResponse(response: any): Promise<unknown> {
+  private async handleResponse(response: AxiosResponse): Promise<unknown> {
     const { status } = response;
     const isSuccess: boolean = status >= 200 && status < 300;
     if (isSuccess) {
