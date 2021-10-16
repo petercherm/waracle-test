@@ -1,7 +1,7 @@
 import { DeepPartial } from "../models/common";
 import { mergeDeep } from "../utils/common";
 import { baseTheme } from "./baseTheme";
-import { sampleTheme } from "./sampleTheme";
+import { catTheme } from "./catTheme";
 
 export enum ThemeName {
   BASE_THEME = "baseTheme",
@@ -10,7 +10,7 @@ export enum ThemeName {
 
 const themes: Record<ThemeName, DeepPartial<Theme>> = {
   baseTheme,
-  sampleTheme
+  sampleTheme: catTheme
 };
 
 export type Theme = typeof baseTheme;
