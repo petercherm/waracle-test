@@ -22,14 +22,14 @@ export const ImageGrid = ({
 
   if (isError) {
     return (
-      <ErrorMessage>
+      <ErrorMessage data-testid="imageGrid__error--fetchError">
         Something went wrong: <strong>{error}</strong>
       </ErrorMessage>
     );
   }
 
   if (isFetching) {
-    return <p>Loading images...</p>;
+    return <p data-testid="imageGrid__loading">Loading images...</p>;
   }
   const renderImages = () =>
     images.map((image: ImageType) => (
@@ -39,7 +39,7 @@ export const ImageGrid = ({
   return (
     <>
       {isUploadError && (
-        <ErrorMessage>
+        <ErrorMessage data-testid="imageGrid__error--uploadError">
           Image cound not be uploaded: <strong>{uploadError}</strong>
         </ErrorMessage>
       )}

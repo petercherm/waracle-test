@@ -63,7 +63,7 @@ export const ImageTile = ({ image }: ImageTileProps) => {
   };
 
   return (
-    <ImageTileContainer>
+    <ImageTileContainer data-testid="imageTile__container">
       <ImageTileItem>
         <ImageContainer url={image.url} />
         <ImageFunctionBarContainer>

@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GIVEN ImageGrid component it matches the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <p>
+        Your cats - number of images: 2
+      </p>
+      <ul
+        class="sc-pGacB fJVTtY"
+      >
+        <li
+          class="sc-jSgvzq hoornl"
+          data-testid="imageTile__container"
+        >
+          <div
+            class="sc-gKseQn kdXeal"
+          >
+            <div
+              class="sc-iBPTik lcZBCW"
+            />
+            <div
+              class="sc-fubCzh gKaocU"
+            >
+              <div
+                class="sc-dlfnuX jyuqyF"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  stroke-miterlimit="1.5"
+                  viewBox="0 0 50 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25 13c4.21-8 12.631-8 16.842-4 4.211 4 4.211 12 0 20C38.894 35 31.315 41 25 45c-6.316-4-13.895-10-16.842-16-4.21-8-4.21-16 0-20S20.79 5 25 13Z"
+                    fill="#eee"
+                    stroke="black"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div
+                class="sc-eCstlR hGtvQl"
+              >
+                <div
+                  class="sc-hKgJUU dcCLdc"
+                  role="button"
+                >
+                  <svg
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    viewBox="0 0 50 50"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                      fill="green"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </div>
+                <span>
+                  0
+                </span>
+                <div
+                  class="sc-hKgJUU dwimHp"
+                  role="button"
+                >
+                  <svg
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    viewBox="0 0 50 50"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                      fill="red"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="sc-jSgvzq hoornl"
+          data-testid="imageTile__container"
+        >
+          <div
+            class="sc-gKseQn kdXeal"
+          >
+            <div
+              class="sc-iBPTik lcZBCW"
+            />
+            <div
+              class="sc-fubCzh gKaocU"
+            >
+              <div
+                class="sc-dlfnuX jyuqyF"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  stroke-miterlimit="1.5"
+                  viewBox="0 0 50 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25 13c4.21-8 12.631-8 16.842-4 4.211 4 4.211 12 0 20C38.894 35 31.315 41 25 45c-6.316-4-13.895-10-16.842-16-4.21-8-4.21-16 0-20S20.79 5 25 13Z"
+                    fill="#eee"
+                    stroke="black"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div
+                class="sc-eCstlR hGtvQl"
+              >
+                <div
+                  class="sc-hKgJUU dcCLdc"
+                  role="button"
+                >
+                  <svg
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    viewBox="0 0 50 50"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                      fill="green"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </div>
+                <span>
+                  0
+                </span>
+                <div
+                  class="sc-hKgJUU dwimHp"
+                  role="button"
+                >
+                  <svg
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="2"
+                    viewBox="0 0 50 50"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                      fill="red"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="sc-bdfBQB jvHSoF"
+          data-testid="addImage__container"
+          role="button"
+        >
+          <div
+            class="sc-gsTEea flsboI"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <p>
+      Your cats - number of images: 2
+    </p>
+    <ul
+      class="sc-pGacB fJVTtY"
+    >
+      <li
+        class="sc-jSgvzq hoornl"
+        data-testid="imageTile__container"
+      >
+        <div
+          class="sc-gKseQn kdXeal"
+        >
+          <div
+            class="sc-iBPTik lcZBCW"
+          />
+          <div
+            class="sc-fubCzh gKaocU"
+          >
+            <div
+              class="sc-dlfnuX jyuqyF"
+              role="button"
+            >
+              <svg
+                clip-rule="evenodd"
+                stroke-miterlimit="1.5"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25 13c4.21-8 12.631-8 16.842-4 4.211 4 4.211 12 0 20C38.894 35 31.315 41 25 45c-6.316-4-13.895-10-16.842-16-4.21-8-4.21-16 0-20S20.79 5 25 13Z"
+                  fill="#eee"
+                  stroke="black"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-eCstlR hGtvQl"
+            >
+              <div
+                class="sc-hKgJUU dcCLdc"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 50 50"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                    fill="green"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </div>
+              <span>
+                0
+              </span>
+              <div
+                class="sc-hKgJUU dwimHp"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 50 50"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                    fill="red"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="sc-jSgvzq hoornl"
+        data-testid="imageTile__container"
+      >
+        <div
+          class="sc-gKseQn kdXeal"
+        >
+          <div
+            class="sc-iBPTik lcZBCW"
+          />
+          <div
+            class="sc-fubCzh gKaocU"
+          >
+            <div
+              class="sc-dlfnuX jyuqyF"
+              role="button"
+            >
+              <svg
+                clip-rule="evenodd"
+                stroke-miterlimit="1.5"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25 13c4.21-8 12.631-8 16.842-4 4.211 4 4.211 12 0 20C38.894 35 31.315 41 25 45c-6.316-4-13.895-10-16.842-16-4.21-8-4.21-16 0-20S20.79 5 25 13Z"
+                  fill="#eee"
+                  stroke="black"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-eCstlR hGtvQl"
+            >
+              <div
+                class="sc-hKgJUU dcCLdc"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 50 50"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                    fill="green"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </div>
+              <span>
+                0
+              </span>
+              <div
+                class="sc-hKgJUU dwimHp"
+                role="button"
+              >
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 50 50"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M40.04 21.667h-9.4l3.378-10.976c.711-2.289-1.155-4.577-3.733-4.577-1.288 0-2.533.533-3.377 1.444l-13.02 14.11H5v22.218h32.062c2.355 0 4.4-1.488 4.866-3.577l2.977-13.332c.6-2.755-1.733-5.31-4.865-5.31ZM13.888 41.664H7.222V23.89h6.666v17.775Zm28.84-15.175L39.751 39.82c-.223 1.067-1.356 1.844-2.689 1.844H16.11v-19.13L28.552 9.069c.422-.467 1.067-.733 1.733-.733.578 0 1.111.244 1.4.666.156.222.333.578.2 1.045l-3.377 10.976-.889 2.866h12.398c.911 0 1.778.378 2.289 1.022.289.333.578.889.422 1.578Z"
+                    fill="red"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="sc-bdfBQB jvHSoF"
+        data-testid="addImage__container"
+        role="button"
+      >
+        <div
+          class="sc-gsTEea flsboI"
+        />
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
