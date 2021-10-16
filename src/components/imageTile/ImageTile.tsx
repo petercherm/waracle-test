@@ -12,6 +12,8 @@ import {
   FavouriteItem,
   FavouritesStatus
 } from "../../state/favourites/favouritesReducer";
+import { setVoteAction } from "../../state/votes/voteActions";
+import { getVotes, getVotesStatus } from "../../state/votes/voteSelectors";
 import { FavouriteIcon } from "../favouriteIcon/FavouriteIcon";
 import { Vote } from "../vote/Vote";
 import {
@@ -37,6 +39,12 @@ export const ImageTile = ({ image }: ImageTileProps) => {
   const isCurrentFavouriteUpdaing =
     favouritesStatus.updatingImageId == image.id;
 
+  const votes = useSelector(getVotes);
+  const score = votes[image.id]?.score || 0;
+  const votesStatus = useSelector(getVotesStatus);
+  const isVotesUpdating = votesStatus.isUpdating;
+  const isCurrenVoteUpdating = votesStatus.updatingImageId === image.id;
+
   const handleToggleFavourite = () => {
     if (favourite) {
       dispatch(
@@ -50,6 +58,10 @@ export const ImageTile = ({ image }: ImageTileProps) => {
     }
   };
 
+  const handleSetVote = (value: 0 | 1) => {
+    dispatch(setVoteAction.request({ imageId: image.id, value }));
+  };
+
   return (
     <ImageTileContainer>
       <ImageTileItem>
@@ -61,7 +73,12 @@ export const ImageTile = ({ image }: ImageTileProps) => {
             isUpdating={isCurrentFavouriteUpdaing}
             onToggleFavourite={handleToggleFavourite}
           />
-          <Vote />
+          <Vote
+            isUpdating={isCurrenVoteUpdating}
+            isDisabled={isVotesUpdating}
+            onVote={handleSetVote}
+            score={score}
+          />
         </ImageFunctionBarContainer>
       </ImageTileItem>
     </ImageTileContainer>

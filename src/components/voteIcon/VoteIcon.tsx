@@ -1,3 +1,4 @@
+import { Vote } from "../vote/Vote";
 import { VoteIconContainer } from "./VoteIcon.styles";
 
 export enum VoteType {
@@ -8,7 +9,7 @@ export enum VoteType {
 export interface VoteIconProps {
   isDisabled: boolean;
   isUpdating: boolean;
-  onVote: () => void;
+  onVote: (value: 0 | 1) => void;
   voteType: VoteType;
 }
 
@@ -20,7 +21,9 @@ export const VoteIcon = ({
 }: VoteIconProps) => {
   return (
     <VoteIconContainer
-      onClick={onVote}
+      {...(!isUpdating && {
+        onClick: () => onVote(voteType === VoteType.UPVOTE ? 1 : 0)
+      })}
       voteType={voteType}
       isDisabled={isDisabled}
       isUpdating={isUpdating}

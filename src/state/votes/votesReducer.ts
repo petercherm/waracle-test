@@ -2,21 +2,22 @@ import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
 import { requestVotesAction, setVoteAction } from "./voteActions";
 
-export interface VoteItem {
-  id: number;
-  imageId: string;
+export interface ScoreType {
+  score: number;
 }
+
+export type Score = Record<string, ScoreType>;
 export interface VotesStatus extends FetchStatus {
   updatingImageId: string;
   isUpdating: boolean;
 }
 export interface VotesState {
-  items: VoteItem[];
+  items: Score;
   status: VotesStatus;
 }
 
 export const votesInitialState: VotesState = {
-  items: [],
+  items: {},
   status: {
     isFetching: false,
     isUpdating: false,

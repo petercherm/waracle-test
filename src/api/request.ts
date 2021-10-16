@@ -7,35 +7,35 @@ export class Request {
     axiosRetry(axios, { retries: 3, retryDelay: exponentialDelay });
   }
 
-  public async get(url: string): Promise<any> {
+  public async get(url: string): Promise<unknown> {
     return await axios
       .get(url, this.getRequestParams(HttpMethod.GET))
       .then(this.handleResponse)
       .catch(this.handleError);
   }
 
-  public async post(url: string, data = {}): Promise<any> {
+  public async post(url: string, data = {}): Promise<unknown> {
     return await axios
       .post(url, data, this.getRequestParams(HttpMethod.POST))
       .then(this.handleResponse)
       .catch(this.handleError);
   }
 
-  public async put(url: string, data = {}): Promise<any> {
+  public async put(url: string, data = {}): Promise<unknown> {
     return await axios
       .put(url, data, this.getRequestParams(HttpMethod.PUT))
       .then(this.handleResponse)
       .catch(this.handleError);
   }
 
-  public async delete(url: string): Promise<any> {
+  public async delete(url: string): Promise<unknown> {
     return await axios
       .delete(url, this.getRequestParams(HttpMethod.DELETE))
       .then(this.handleResponse)
       .catch(this.handleError);
   }
 
-  private async handleResponse(response: any): Promise<any> {
+  private async handleResponse(response: any): Promise<unknown> {
     const { status } = response;
     const isSuccess: boolean = status >= 200 && status < 300;
     if (isSuccess) {
@@ -55,6 +55,7 @@ export class Request {
   private getRequestParams(method: HttpMethod) {
     return {
       method,
+      mode: "cors" as RequestMode,
       cache: "no-cache" as RequestCache,
       credentials: "same-origin" as RequestCredentials,
       redirect: "follow" as RequestRedirect,

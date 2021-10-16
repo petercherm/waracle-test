@@ -3,26 +3,29 @@ import { requestVotesAction, setVoteAction } from "./voteActions";
 import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
 import { ActionType, getType } from "typesafe-actions";
-import { VoteItem } from "./votesReducer";
 import { VotesType } from "../../models/theCatApi/votes.models";
+import { Score } from "./votesReducer";
 
 function* fetchVotes() {
   const { response, error } = yield call(performFetch);
   if (response) {
-    // NOTE: we don't need the entire response, just the IDs
-    const voteIds: VoteItem[] = response.reduce(
-      (acc: VoteItem[], curr: VotesType) => {
-        return [...acc, { id: curr.id, imageId: curr.image_id }];
+    // NOTE: we need to calculate the score for each item
+    const voteImageScores: Score = response.reduce(
+      (acc: Score, curr: VotesType) => {
+        const image = acc[curr.image_id];
+        const score = image?.score || 0;
+        const newScore = score + (curr.value || -1);
+        return { ...acc, [curr.image_id]: { score: newScore } };
       },
-      []
+      {}
     );
-    yield put(requestVotesAction.success(voteIds));
+    yield put(requestVotesAction.success(voteImageScores));
   } else if (error) {
     yield put(requestVotesAction.failure({ error }));
   }
 }
 
-function* setFavourite(action: ActionType<typeof setVoteAction.request>) {
+function* setVote(action: ActionType<typeof setVoteAction.request>) {
   const { response, error } = yield call(
     performSet,
     action.payload.imageId,
@@ -39,7 +42,7 @@ function* setFavourite(action: ActionType<typeof setVoteAction.request>) {
 const performFetch = () => {
   const api = new Request();
   return api
-    .get(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}?limit=50`)
+    .get(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}?limit=10000`)
     .then((response) => ({ response }))
     .catch((error) => ({ error }));
 };
@@ -47,7 +50,7 @@ const performFetch = () => {
 const performSet = (image_id: string, value: 0 | 1) => {
   const api = new Request();
   return api
-    .post(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}`, {
+    .post(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}`, {
       image_id,
       value
     })
@@ -60,5 +63,5 @@ export function* requestVotesSaga() {
 }
 
 export function* setVoteSaga() {
-  yield takeEvery(getType(setVoteAction.request), setFavourite);
+  yield takeEvery(getType(setVoteAction.request), setVote);
 }

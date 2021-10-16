@@ -1,5 +1,5 @@
 import { ActionType, createAsyncAction } from "typesafe-actions";
-import { VoteItem } from "./votesReducer";
+import { Score } from "./votesReducer";
 
 export enum VotesActionTypes {
   FETCH_VOTES_REQUEST = "@fetch/FETCH_VOTES_REQUEST",
@@ -28,7 +28,7 @@ export const requestVotesAction = createAsyncAction(
   VotesActionTypes.FETCH_VOTES_REQUEST,
   VotesActionTypes.FETCH_VOTES_SUCCESS,
   VotesActionTypes.FETCH_VOTES_FAILURE
-)<undefined, VoteItem[], RequestVotesFailure>();
+)<undefined, Score, RequestVotesFailure>();
 
 export const setVoteAction = createAsyncAction(
   VotesActionTypes.SET_VOTE_REQUEST,
