@@ -9,7 +9,7 @@ export const AddImageContainer = styled.li(({ theme }) => ({
     width: "50%"
   },
 
-  [theme.mediaQuery.tablet]: {
+  [theme.mediaQuery.custom(750)]: {
     width: "33%",
     padding: `${theme.sizes.medium} ${theme.sizes.small}`
   },

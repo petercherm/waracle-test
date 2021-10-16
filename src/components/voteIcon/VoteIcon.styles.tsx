@@ -7,6 +7,7 @@ export const VoteIconContainer = styled.div.attrs({ role: "button" })<{
   voteType: VoteType;
 }>(({ isDisabled, isUpdating, voteType, theme }) => ({
   display: "flex",
+  justifyContent: "center",
   transform: voteType === VoteType.UPVOTE ? "rotate(0deg)" : "rotate(180deg)",
   width: "20%",
   height: "80%",
