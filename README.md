@@ -13,6 +13,7 @@
 - run `npm install`
 - run `npm start` (that will stary the dev build)
 - you can also run a production build by typing `npm run build` and then starting the server with `serve -s build` (`serve` needs to be installed in your system first)
+- please disable `CORS` in your browser
 
 ## Tech-Stack
 
