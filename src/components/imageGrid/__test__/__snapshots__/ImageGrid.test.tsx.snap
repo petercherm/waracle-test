@@ -172,10 +172,10 @@ Object {
         <li
           class="sc-bdfBQB jvHSoF"
           data-testid="addImage__container"
-          role="button"
         >
           <div
             class="sc-gsTEea fZByWz"
+            role="button"
           />
         </li>
       </ul>
@@ -349,10 +349,10 @@ Object {
       <li
         class="sc-bdfBQB jvHSoF"
         data-testid="addImage__container"
-        role="button"
       >
         <div
           class="sc-gsTEea fZByWz"
+          role="button"
         />
       </li>
     </ul>

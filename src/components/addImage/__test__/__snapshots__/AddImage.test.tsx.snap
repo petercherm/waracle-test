@@ -8,10 +8,10 @@ Object {
       <li
         class="sc-bdfBQB jvHSoF"
         data-testid="addImage__container"
-        role="button"
       >
         <div
           class="sc-gsTEea fZByWz"
+          role="button"
         />
       </li>
     </div>
@@ -20,10 +20,10 @@ Object {
     <li
       class="sc-bdfBQB jvHSoF"
       data-testid="addImage__container"
-      role="button"
     >
       <div
         class="sc-gsTEea fZByWz"
+        role="button"
       />
     </li>
   </div>,
