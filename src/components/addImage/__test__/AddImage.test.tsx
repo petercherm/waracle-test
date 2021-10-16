@@ -4,7 +4,7 @@ import { AddImage } from "../AddImage";
 
 describe("GIVEN the <AddImage /> component", () => {
   test("it matches the snapshot", () => {
-    const container = render(<AddImage />);
+    const container = render(<AddImage onUploadImage={() => ({})} />);
 
     expect(container).toMatchSnapshot();
   });
