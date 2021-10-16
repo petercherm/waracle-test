@@ -1,7 +1,9 @@
-import axios from "axios";
+import axios, { AxiosRequestHeaders } from "axios";
 import axiosRetry, { exponentialDelay } from "axios-retry";
 import { HttpMethod } from "../models/api";
 
+/* NOTE: having a class here is useful as, e.g. in real-life projects it's often
+   necessery to pass some "tune" the requests with attributes specific for certain endpoints */
 export class Request {
   constructor() {
     axiosRetry(axios, { retries: 3, retryDelay: exponentialDelay });
@@ -65,7 +67,7 @@ export class Request {
         "Content-Type": "application/json",
         Accept: "application/json",
         "x-api-key": process.env.REACT_APP_API_TOKEN
-      } as any
+      } as AxiosRequestHeaders // required because `x-api-key` is a non-standard header
     };
   }
 }

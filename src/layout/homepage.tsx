@@ -25,6 +25,8 @@ export const Homepage = () => {
   const hiddenFileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    /* NOTE: these fetches could be grouped into one action and handled
+       the `initialiseApp` saga */
     dispatch(requestImagesAction.request());
     dispatch(requestFavouritesAction.request());
     dispatch(requestVotesAction.request());
@@ -41,6 +43,8 @@ export const Homepage = () => {
     const target = event.target as HTMLInputElement;
     const files = target.files as FileList;
     formData.append("file", files[0]);
+    /* NOTE: This is an exception I made to keep things nice and consistent. 
+       Actions should not contain any non-serialised data */
     dispatch(uploadImageAction.request(formData));
   };
 

@@ -10,6 +10,8 @@ import { ActionType, getType } from "typesafe-actions";
 import { FavouritesType } from "../../models/theCatApi/favourites.models";
 import { FavouriteItem } from "./favouritesReducer";
 
+const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
+
 function* fetchFavourites() {
   const { response, error } = yield call(performFetch);
   if (response) {
@@ -52,15 +54,14 @@ function* unsetFavourite(
 }
 
 const performFetch = () => {
-  const api = new Request();
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}?limit=50`)
     .then((response) => ({ response }))
     .catch((error) => ({ error }));
 };
 
+//NOTE: Fetches have been extracted to separate functions to make saga testing possible
 const performSet = (image_id: string) => {
-  const api = new Request();
   return api
     .post(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}`, {
       image_id

@@ -4,6 +4,8 @@ import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
 import { getType } from "typesafe-actions";
 
+const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
+
 function* fetchImages() {
   const { response, error } = yield call(performFetch);
   if (response) {
@@ -12,9 +14,8 @@ function* fetchImages() {
     yield put(requestImagesAction.failure({ error }));
   }
 }
-
+//NOTE: Fetch has been extracted to a separate function to make saga testing possible
 const performFetch = () => {
-  const api = new Request();
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}?limit=50`)
     .then((response) => ({ response }))

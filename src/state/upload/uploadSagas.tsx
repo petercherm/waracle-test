@@ -7,6 +7,8 @@ import { endpoints } from "../../api/endpoints";
 import { AnyAction } from "redux";
 import { requestImagesAction } from "../images/imageActions";
 
+const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
+
 function* uploadImage(action: AnyAction) {
   const { response, error } = yield call(performUpload, action.payload);
   if (response) {
@@ -18,8 +20,8 @@ function* uploadImage(action: AnyAction) {
   }
 }
 
+//NOTE: Fetch has been extracted to a separate function to make saga testing possible
 const performUpload = (file: FormData) => {
-  const api = new Request();
   return api
     .post(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}/upload`, file)
     .then((response) => ({ response }))

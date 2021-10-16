@@ -39,6 +39,8 @@
 - displaying the full-size image on click
 - deleting the images
 - better error handling and loading state (nicer animations etc.)
+- some action creators and saga helper functions could be wrapped in more generic functions to reduce the code repetition
+- some types could possibly be unified and made more generic
   
 ## Things to be aware of
 

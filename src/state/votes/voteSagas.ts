@@ -6,6 +6,8 @@ import { ActionType, getType } from "typesafe-actions";
 import { VotesType } from "../../models/theCatApi/votes.models";
 import { Score } from "./votesReducer";
 
+const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
+
 function* fetchVotes() {
   const { response, error } = yield call(performFetch);
   if (response) {
@@ -39,8 +41,8 @@ function* setVote(action: ActionType<typeof setVoteAction.request>) {
   }
 }
 
+//NOTE: Fetches have been extracted to separate functions to make saga testing possible
 const performFetch = () => {
-  const api = new Request();
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}?limit=10000`)
     .then((response) => ({ response }))
@@ -48,7 +50,6 @@ const performFetch = () => {
 };
 
 const performSet = (image_id: string, value: 0 | 1) => {
-  const api = new Request();
   return api
     .post(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}`, {
       image_id,
