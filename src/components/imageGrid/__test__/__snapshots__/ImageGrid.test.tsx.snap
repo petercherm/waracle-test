@@ -12,7 +12,7 @@ Object {
         class="sc-pGacB fJVTtY"
       >
         <li
-          class="sc-jSgvzq hoornl"
+          class="sc-jSgvzq gssyfx"
           data-testid="imageTile__container"
         >
           <div
@@ -46,7 +46,7 @@ Object {
                 class="sc-eCstlR hGtvQl"
               >
                 <div
-                  class="sc-hKgJUU dcCLdc"
+                  class="sc-hKgJUU cGeifQ"
                   role="button"
                 >
                   <svg
@@ -68,7 +68,7 @@ Object {
                   0
                 </span>
                 <div
-                  class="sc-hKgJUU dwimHp"
+                  class="sc-hKgJUU jOGJDV"
                   role="button"
                 >
                   <svg
@@ -91,7 +91,7 @@ Object {
           </div>
         </li>
         <li
-          class="sc-jSgvzq hoornl"
+          class="sc-jSgvzq gssyfx"
           data-testid="imageTile__container"
         >
           <div
@@ -125,7 +125,7 @@ Object {
                 class="sc-eCstlR hGtvQl"
               >
                 <div
-                  class="sc-hKgJUU dcCLdc"
+                  class="sc-hKgJUU cGeifQ"
                   role="button"
                 >
                   <svg
@@ -147,7 +147,7 @@ Object {
                   0
                 </span>
                 <div
-                  class="sc-hKgJUU dwimHp"
+                  class="sc-hKgJUU jOGJDV"
                   role="button"
                 >
                   <svg
@@ -170,7 +170,7 @@ Object {
           </div>
         </li>
         <li
-          class="sc-bdfBQB jvHSoF"
+          class="sc-bdfBQB dzUwvV"
           data-testid="addImage__container"
         >
           <div
@@ -189,7 +189,7 @@ Object {
       class="sc-pGacB fJVTtY"
     >
       <li
-        class="sc-jSgvzq hoornl"
+        class="sc-jSgvzq gssyfx"
         data-testid="imageTile__container"
       >
         <div
@@ -223,7 +223,7 @@ Object {
               class="sc-eCstlR hGtvQl"
             >
               <div
-                class="sc-hKgJUU dcCLdc"
+                class="sc-hKgJUU cGeifQ"
                 role="button"
               >
                 <svg
@@ -245,7 +245,7 @@ Object {
                 0
               </span>
               <div
-                class="sc-hKgJUU dwimHp"
+                class="sc-hKgJUU jOGJDV"
                 role="button"
               >
                 <svg
@@ -268,7 +268,7 @@ Object {
         </div>
       </li>
       <li
-        class="sc-jSgvzq hoornl"
+        class="sc-jSgvzq gssyfx"
         data-testid="imageTile__container"
       >
         <div
@@ -302,7 +302,7 @@ Object {
               class="sc-eCstlR hGtvQl"
             >
               <div
-                class="sc-hKgJUU dcCLdc"
+                class="sc-hKgJUU cGeifQ"
                 role="button"
               >
                 <svg
@@ -324,7 +324,7 @@ Object {
                 0
               </span>
               <div
-                class="sc-hKgJUU dwimHp"
+                class="sc-hKgJUU jOGJDV"
                 role="button"
               >
                 <svg
@@ -347,7 +347,7 @@ Object {
         </div>
       </li>
       <li
-        class="sc-bdfBQB jvHSoF"
+        class="sc-bdfBQB dzUwvV"
         data-testid="addImage__container"
       >
         <div
