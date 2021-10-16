@@ -33,6 +33,7 @@ export const AddImageTile = styled.div<{ isUploading: boolean }>(
     transition: "all 0.3s ease-in-out",
     margin: `${theme.sizes.medium} ${theme.sizes.small}`,
     pointerEvents: isUploading ? "none" : "all",
+    borderRadius: theme.sizes.medium,
 
     ["&:hover"]: !isUploading
       ? {

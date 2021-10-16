@@ -16,13 +16,13 @@ Object {
           data-testid="imageTile__container"
         >
           <div
-            class="sc-gKseQn kdXeal"
+            class="sc-gKseQn jwVoyy"
           >
             <div
-              class="sc-iBPTik lcZBCW"
+              class="sc-iBPTik eQTGlk"
             />
             <div
-              class="sc-fubCzh gKaocU"
+              class="sc-fubCzh iEVAhe"
             >
               <div
                 class="sc-dlfnuX jyuqyF"
@@ -95,13 +95,13 @@ Object {
           data-testid="imageTile__container"
         >
           <div
-            class="sc-gKseQn kdXeal"
+            class="sc-gKseQn jwVoyy"
           >
             <div
-              class="sc-iBPTik lcZBCW"
+              class="sc-iBPTik eQTGlk"
             />
             <div
-              class="sc-fubCzh gKaocU"
+              class="sc-fubCzh iEVAhe"
             >
               <div
                 class="sc-dlfnuX jyuqyF"
@@ -175,7 +175,7 @@ Object {
           role="button"
         >
           <div
-            class="sc-gsTEea flsboI"
+            class="sc-gsTEea fZByWz"
           />
         </li>
       </ul>
@@ -193,13 +193,13 @@ Object {
         data-testid="imageTile__container"
       >
         <div
-          class="sc-gKseQn kdXeal"
+          class="sc-gKseQn jwVoyy"
         >
           <div
-            class="sc-iBPTik lcZBCW"
+            class="sc-iBPTik eQTGlk"
           />
           <div
-            class="sc-fubCzh gKaocU"
+            class="sc-fubCzh iEVAhe"
           >
             <div
               class="sc-dlfnuX jyuqyF"
@@ -272,13 +272,13 @@ Object {
         data-testid="imageTile__container"
       >
         <div
-          class="sc-gKseQn kdXeal"
+          class="sc-gKseQn jwVoyy"
         >
           <div
-            class="sc-iBPTik lcZBCW"
+            class="sc-iBPTik eQTGlk"
           />
           <div
-            class="sc-fubCzh gKaocU"
+            class="sc-fubCzh iEVAhe"
           >
             <div
               class="sc-dlfnuX jyuqyF"
@@ -352,7 +352,7 @@ Object {
         role="button"
       >
         <div
-          class="sc-gsTEea flsboI"
+          class="sc-gsTEea fZByWz"
         />
       </li>
     </ul>
