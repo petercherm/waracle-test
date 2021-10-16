@@ -23,7 +23,7 @@ export const ImageTileItem = styled.div(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "stretch",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
   backgroundColor: theme.colors.addImageColor,
   border: `1px solid ${theme.colors.primaryColor}`,
   margin: `${theme.sizes.medium} ${theme.sizes.small}`,
@@ -41,8 +41,10 @@ export const ImageContainer = styled.div<{ url: string }>(({ url }) => ({
 export const ImageFunctionBarContainer = styled.div(({ theme }) => ({
   padding: theme.sizes.xSmall,
   display: "flex",
+  justifyContent: "space-between",
   alignItems: "center",
   height: "20%",
+  maxHeight: 60,
   flex: "auto 1 0",
   marginTop: theme.sizes.xSmall
 }));

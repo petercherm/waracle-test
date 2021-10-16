@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { VoteType } from "./VoteIcon";
 
-export const FavouriteIconContainer = styled.div.attrs({ role: "button" })<{
+export const VoteIconContainer = styled.div.attrs({ role: "button" })<{
   isDisabled: boolean;
   isUpdating: boolean;
-}>(({ isDisabled, isUpdating }) => ({
+  voteType: VoteType;
+}>(({ isDisabled, isUpdating, voteType, theme }) => ({
+  transform: voteType === VoteType.UPVOTE ? "rotate(0deg)" : "rotate(180deg)",
   width: "20%",
   height: "80%",
   cursor: isDisabled ? "not-allowed" : "pointer",
@@ -12,7 +15,9 @@ export const FavouriteIconContainer = styled.div.attrs({ role: "button" })<{
   opacity: isUpdating ? 0.5 : 1,
 
   [":hover"]: {
-    transform: "scale(1.2)"
+    ...(voteType === VoteType.UPVOTE
+      ? { marginBottom: theme.sizes.small }
+      : { marginTop: theme.sizes.small })
   },
 
   ["svg"]: {

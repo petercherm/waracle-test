@@ -13,6 +13,7 @@ import {
   FavouritesStatus
 } from "../../state/favourites/favouritesReducer";
 import { FavouriteIcon } from "../favouriteIcon/FavouriteIcon";
+import { Vote } from "../vote/Vote";
 import {
   ImageTileItem,
   ImageContainer,
@@ -60,6 +61,7 @@ export const ImageTile = ({ image }: ImageTileProps) => {
             isUpdating={isCurrentFavouriteUpdaing}
             onToggleFavourite={handleToggleFavourite}
           />
+          <Vote />
         </ImageFunctionBarContainer>
       </ImageTileItem>
     </ImageTileContainer>
