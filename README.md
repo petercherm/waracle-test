@@ -21,9 +21,8 @@
 - Redux
 - Redux-Saga
 - typesafe-actions
-- styled-components
+- styled-components (with theming)
 - Axios
-- theming
 
 ## Principles
 
