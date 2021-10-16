@@ -48,6 +48,7 @@ module.exports = {
       "warn",
       { allowSingleExtends: true }
     ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     // needed for jsx without react import
     "react/react-in-jsx-scope": "off",
     "no-unused-expressions": "warn",

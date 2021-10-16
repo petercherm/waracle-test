@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { ChangeEvent, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Header } from "../components/header/Header";
 import { ImageGrid } from "../components/imageGrid/ImageGrid";
@@ -34,9 +34,11 @@ export const Homepage = () => {
     }
   };
 
-  const handleUploadImage = (event: any) => {
+  const handleUploadImage = (event: ChangeEvent) => {
     const formData = new FormData();
-    formData.append("file", event.target.files[0]);
+    const target = event.target as HTMLInputElement;
+    const files = target.files as FileList;
+    formData.append("file", files[0]);
     dispatch(uploadImageAction.request(formData));
   };
 

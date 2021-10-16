@@ -1,9 +1,10 @@
 import { FetchStatus, RootAction } from "../../store/rootAction";
 import { createReducer } from "typesafe-actions";
 import { requestImagesAction } from "./imageActions";
+import { ImageType } from "../../models/theCatApi/image.models";
 
 export interface ImagesState {
-  items: any[];
+  items: ImageType[];
   status: FetchStatus;
 }
 

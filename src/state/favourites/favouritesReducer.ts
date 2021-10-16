@@ -65,7 +65,12 @@ export const favouritesReducer = createReducer<FavouritesState, RootAction>(
     })
   )
   .handleAction(
-    [setFavouriteAction.success, setFavouriteAction.failure],
+    [
+      setFavouriteAction.success,
+      setFavouriteAction.failure,
+      unsetFavouriteAction.success,
+      unsetFavouriteAction.failure
+    ],
     (state) => ({
       ...state,
       status: {
