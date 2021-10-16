@@ -3,8 +3,8 @@
 ## Functionalities
 
 - uploading the cat images
-- lisitng the uploaded images
-- favouriting and unfavouriting the uploaded images
+- lisitng up to 50 of the uploaded images
+- favouriting and unfavouriting the uploaded images (supporting up to 10,000 votes)
 - upvoting and downvoting the images
 
 ## How to run it
