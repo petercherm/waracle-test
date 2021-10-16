@@ -23,6 +23,7 @@
 - typesafe-actions
 - styled-components
 - Axios
+- theming
 
 ## Principles
 
