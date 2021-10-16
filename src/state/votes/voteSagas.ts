@@ -5,6 +5,7 @@ import { endpoints } from "../../api/endpoints";
 import { ActionType, getType } from "typesafe-actions";
 import { VotesType } from "../../models/theCatApi/votes.models";
 import { Score } from "./votesReducer";
+import { returnError } from "../../utils/api";
 
 const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
 
@@ -57,14 +58,7 @@ const performSet = (image_id: string, value: 0 | 1) => {
       value
     })
     .then((response) => ({ response }))
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 export function* requestVotesSaga() {

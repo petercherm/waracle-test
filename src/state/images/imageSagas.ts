@@ -3,6 +3,7 @@ import { requestImagesAction } from "./imageActions";
 import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
 import { getType } from "typesafe-actions";
+import { returnError } from "../../utils/api";
 
 const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
 
@@ -19,14 +20,7 @@ const performFetch = () => {
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}?limit=50`)
     .then((response) => ({ response }))
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 export function* requestImagesSaga() {

@@ -6,6 +6,7 @@ import { Request } from "../../api/request";
 import { endpoints } from "../../api/endpoints";
 import { AnyAction } from "redux";
 import { requestImagesAction } from "../images/imageActions";
+import { returnError } from "../../utils/api";
 
 const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
 
@@ -27,14 +28,7 @@ const performUpload = (file: FormData) => {
     .then((response) => {
       return { response };
     })
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 export function* uploadImageSaga() {

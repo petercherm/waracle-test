@@ -9,6 +9,7 @@ import { endpoints } from "../../api/endpoints";
 import { ActionType, getType } from "typesafe-actions";
 import { FavouritesType } from "../../models/theCatApi/favourites.models";
 import { FavouriteItem } from "./favouritesReducer";
+import { returnError } from "../../utils/api";
 
 const api = new Request(); // usually it's initiated for each endpoint if they require secific attributes
 
@@ -59,14 +60,7 @@ const performFetch = () => {
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}?limit=50`)
     .then((response) => ({ response }))
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 const performSet = (image_id: string) => {
@@ -75,14 +69,7 @@ const performSet = (image_id: string) => {
       image_id
     })
     .then((response) => ({ response }))
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 const performUnset = (favouriteId: number) => {
@@ -92,14 +79,7 @@ const performUnset = (favouriteId: number) => {
       `${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}/${favouriteId}`
     )
     .then((response) => ({ response }))
-    .catch((error) => {
-      if (error.response) {
-        return {
-          error: { message: error?.response?.data?.message || "Unknown error" }
-        };
-      }
-      return { error };
-    });
+    .catch((error) => returnError(error));
 };
 
 export function* requestFavouritesSaga() {
