@@ -5,7 +5,7 @@ export const FavouriteIconContainer = styled.div.attrs({ role: "button" })<{
   isUpdating: boolean;
 }>(({ isDisabled, isUpdating }) => ({
   display: "flex",
-  width: "20%",
+  width: "15%",
   height: "80%",
   cursor: isDisabled ? "not-allowed" : "pointer",
   pointerEvents: isDisabled ? "none" : "all",
