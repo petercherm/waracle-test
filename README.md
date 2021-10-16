@@ -30,6 +30,7 @@
 - all the actions, reducers and the entire state are fully typed
 - each request is re-tried 3 times before it throws an error
 - redux-sagas are used for all the async operations
+- single source of truth (the BE is the only source of truth, local state isn't used to avoid potential sync issues)
 - the store contains only the data needed for the app to function
 - all the logic required to transpile the responses sits within the sagas
 
