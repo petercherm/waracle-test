@@ -57,7 +57,14 @@ const performSet = (image_id: string, value: 0 | 1) => {
       value
     })
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
 export function* requestVotesSaga() {

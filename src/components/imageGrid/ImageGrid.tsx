@@ -23,7 +23,8 @@ export const ImageGrid = ({
   if (isError) {
     return (
       <ErrorMessage data-testid="imageGrid__error--fetchError">
-        Something went wrong: <strong>{error}</strong>
+        Something went wrong: <br />
+        <strong>{error}</strong>
       </ErrorMessage>
     );
   }
@@ -40,7 +41,8 @@ export const ImageGrid = ({
     <>
       {isUploadError && (
         <ErrorMessage data-testid="imageGrid__error--uploadError">
-          Image cound not be uploaded: <strong>{uploadError}</strong>
+          Image cound not be uploaded: <br />
+          <strong>{uploadError}</strong>
         </ErrorMessage>
       )}
       <p>

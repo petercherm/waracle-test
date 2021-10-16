@@ -54,21 +54,35 @@ function* unsetFavourite(
   }
 }
 
+//NOTE: Fetches have been extracted to separate functions to make saga testing possible
 const performFetch = () => {
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}?limit=50`)
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
-//NOTE: Fetches have been extracted to separate functions to make saga testing possible
 const performSet = (image_id: string) => {
   return api
     .post(`${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}`, {
       image_id
     })
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
 const performUnset = (favouriteId: number) => {
@@ -78,7 +92,14 @@ const performUnset = (favouriteId: number) => {
       `${process.env.REACT_APP_API_URL}${endpoints.FAVOURITES}/${favouriteId}`
     )
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
 export function* requestFavouritesSaga() {

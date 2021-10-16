@@ -24,8 +24,17 @@ function* uploadImage(action: AnyAction) {
 const performUpload = (file: FormData) => {
   return api
     .post(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}/upload`, file)
-    .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .then((response) => {
+      return { response };
+    })
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
 export function* uploadImageSaga() {

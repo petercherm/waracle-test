@@ -19,7 +19,14 @@ const performFetch = () => {
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.IMAGES}?limit=50`)
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => {
+      if (error.response) {
+        return {
+          error: { message: error?.response?.data?.message || "Unknown error" }
+        };
+      }
+      return { error };
+    });
 };
 
 export function* requestImagesSaga() {
