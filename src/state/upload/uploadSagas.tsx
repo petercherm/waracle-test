@@ -14,6 +14,7 @@ function* uploadImage(action: AnyAction) {
     yield put(requestImagesAction.request());
   } else if (error) {
     yield put(uploadImageAction.failure({ error }));
+    yield put(requestImagesAction.request());
   }
 }
 

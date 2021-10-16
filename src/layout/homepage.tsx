@@ -9,6 +9,7 @@ import {
   getImagesFetchStatus
 } from "../state/images/imageSelectors";
 import { uploadImageAction } from "../state/upload/uploadActions";
+import { getImageUploadStatus } from "../state/upload/uploadSelectors";
 import { requestVotesAction } from "../state/votes/voteActions";
 import {
   Container,
@@ -20,6 +21,7 @@ export const Homepage = () => {
   const dispatch = useDispatch();
   const images = useSelector(getImages);
   const fetchStatus = useSelector(getImagesFetchStatus);
+  const uploadStatus = useSelector(getImageUploadStatus);
   const hiddenFileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -49,6 +51,7 @@ export const Homepage = () => {
         <ImageGrid
           images={images}
           fetchStatus={fetchStatus}
+          uploadStatus={uploadStatus}
           onUploadImage={handleAddImage}
         />
       </ContentContainer>

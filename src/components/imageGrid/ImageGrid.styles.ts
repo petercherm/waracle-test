@@ -6,3 +6,7 @@ export const ImageGridContainer = styled.ul({
   flexWrap: "wrap",
   padding: 0
 });
+
+export const ErrorMessage = styled.p(({ theme }) => ({
+  color: theme.colors.hightLightColor
+}));
