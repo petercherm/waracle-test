@@ -15,7 +15,8 @@ const api = new Request(); // usually it's initiated for each endpoint if they r
 function* fetchFavourites() {
   const { response, error } = yield call(performFetch);
   if (response) {
-    // NOTE: we don't need the entire response, just the IDs
+    /* NOTE: we don't need the entire response, just the IDs
+       Things like that ideally should be handled on the BE-side */
     const favouriteIds: FavouriteItem[] = response.reduce(
       (acc: FavouriteItem[], curr: FavouritesType) => {
         return [...acc, { id: curr.id, imageId: curr.image_id }];

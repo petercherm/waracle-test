@@ -11,7 +11,8 @@ const api = new Request(); // usually it's initiated for each endpoint if they r
 function* fetchVotes() {
   const { response, error } = yield call(performFetch);
   if (response) {
-    // NOTE: we need to calculate the score for each item
+    /* NOTE: we need to calculate the score for each item
+       Things like that ideally should be handled on the BE-side */
     const voteImageScores: Score = response.reduce(
       (acc: Score, curr: VotesType) => {
         const image = acc[curr.image_id];
