@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const overlayFadeInAnimation = keyframes`  
   from { opacity: 0; }
