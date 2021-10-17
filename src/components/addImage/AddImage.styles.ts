@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AddImageContainer = styled.li(({ theme }) => ({
   width: "100%",
   listStyleType: "none",
-  padding: `${theme.sizes.medium} ${theme.sizes.small}`,
+  padding: `${theme.sizes.xSmall} ${theme.sizes.xSmall}`,
 
   [theme.mediaQuery.custom(500)]: {
     width: "50%"
