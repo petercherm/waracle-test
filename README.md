@@ -35,6 +35,17 @@
 - the store contains only the data needed for the app to function
 - all the logic required to transpile the responses sits within the sagas
 
+## Browser compatibility
+
+The project is compatible and has been tested on:
+
+- Google Chrome (last 2 versions)
+- Apple Safari (last 2 versions)
+- Mozilla Firefox (last 2 versions)
+- Microsoft Edge (last 2 versions)
+
+Internet Explorer 11 support is doable, but it would require a few polyfills and CSS changes. I decided that it's beyond the scope of this exercise.
+
 ## What is missing (which I would add if I had more time)
 
 - more tests (especially tests for sagas)
