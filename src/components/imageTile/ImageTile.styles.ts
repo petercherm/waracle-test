@@ -32,12 +32,28 @@ export const ImageTileItem = styled.div(({ theme }) => ({
   borderRadius: theme.sizes.medium
 }));
 
-export const ImageContainer = styled.div<{ url: string }>(({ url, theme }) => ({
+export const ImageContainerWrapper = styled.div(({ theme }) => ({
   width: "100%",
   height: "85%",
+  borderRadius: theme.sizes.medium,
+  overflow: "hidden"
+}));
+
+export const ImageContainer = styled.div.attrs({ role: "button" })<{
+  url: string;
+}>(({ url, theme }) => ({
+  height: "100%",
   backgroundImage: `url(${url})`,
   backgroundSize: "cover",
-  borderRadius: theme.sizes.medium
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  borderRadius: theme.sizes.medium,
+  transition: "transform 0.5s ease-in-out",
+  cursor: "pointer",
+
+  [":hover"]: {
+    transform: "scale(1.1)"
+  }
 }));
 
 export const ImageFunctionBarContainer = styled.div(({ theme }) => ({

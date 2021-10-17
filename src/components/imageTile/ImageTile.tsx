@@ -20,14 +20,16 @@ import {
   ImageTileItem,
   ImageContainer,
   ImageTileContainer,
-  ImageFunctionBarContainer
+  ImageFunctionBarContainer,
+  ImageContainerWrapper
 } from "./ImageTile.styles";
 
 export interface ImageTileProps {
   image: ImageType;
+  onViewImage: (imageUrl: string) => void;
 }
 
-export const ImageTile = ({ image }: ImageTileProps) => {
+export const ImageTile = ({ image, onViewImage }: ImageTileProps) => {
   const dispatch = useDispatch();
   const favourites: FavouriteItem[] = useSelector(getFavourites);
   const favouritesStatus: FavouritesStatus = useSelector(getFavouritesStatus);
@@ -65,7 +67,12 @@ export const ImageTile = ({ image }: ImageTileProps) => {
   return (
     <ImageTileContainer data-testid="imageTile__container">
       <ImageTileItem>
-        <ImageContainer url={image.url} />
+        <ImageContainerWrapper>
+          <ImageContainer
+            url={image.url}
+            onClick={() => onViewImage(image.url)}
+          />
+        </ImageContainerWrapper>
         <ImageFunctionBarContainer>
           <FavouriteIcon
             isFavourite={isFavourite}

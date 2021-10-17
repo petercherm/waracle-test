@@ -9,13 +9,15 @@ export interface ImageGridProps {
   fetchStatus: FetchStatus;
   uploadStatus: UploadStatus;
   onUploadImage: () => void;
+  onViewImage: (imageUrl: string) => void;
 }
 
 export const ImageGrid = ({
   images,
   fetchStatus,
   uploadStatus,
-  onUploadImage
+  onUploadImage,
+  onViewImage
 }: ImageGridProps) => {
   const { isFetching, isError, error } = fetchStatus;
   const { isError: isUploadError, error: uploadError } = uploadStatus;
@@ -34,7 +36,7 @@ export const ImageGrid = ({
   }
   const renderImages = () =>
     images.map((image: ImageType) => (
-      <ImageTile key={image.id} image={image} />
+      <ImageTile key={image.id} image={image} onViewImage={onViewImage} />
     ));
 
   return (

@@ -1,7 +1,8 @@
-import { ChangeEvent, useEffect, useRef } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Header } from "../components/header/Header";
 import { ImageGrid } from "../components/imageGrid/ImageGrid";
+import { ViewImageModal } from "../components/ViewImageModal/ViewImageModal";
 import { requestFavouritesAction } from "../state/favourites/favouriteActions";
 import { requestImagesAction } from "../state/images/imageActions";
 import {
@@ -23,6 +24,7 @@ export const Homepage = () => {
   const fetchStatus = useSelector(getImagesFetchStatus);
   const uploadStatus = useSelector(getImageUploadStatus);
   const hiddenFileInputRef = useRef<HTMLInputElement>(null);
+  const [viewImageUrl, setViewImageUrl] = useState("");
 
   useEffect(() => {
     /* NOTE: these fetches could be grouped into one action and handled
@@ -48,6 +50,14 @@ export const Homepage = () => {
     dispatch(uploadImageAction.request(formData));
   };
 
+  const handleViewImage = (imageUrl: string) => {
+    setViewImageUrl(imageUrl);
+  };
+
+  const handleViewImageClose = () => {
+    setViewImageUrl("");
+  };
+
   return (
     <Container>
       <Header />
@@ -57,8 +67,15 @@ export const Homepage = () => {
           fetchStatus={fetchStatus}
           uploadStatus={uploadStatus}
           onUploadImage={handleAddImage}
+          onViewImage={handleViewImage}
         />
       </ContentContainer>
+      {viewImageUrl && (
+        <ViewImageModal
+          imageUrl={viewImageUrl}
+          onClose={handleViewImageClose}
+        />
+      )}
       <HiddenFileInput ref={hiddenFileInputRef} onChange={handleUploadImage} />
     </Container>
   );

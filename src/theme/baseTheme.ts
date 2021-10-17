@@ -8,7 +8,9 @@ export const baseTheme = {
     backgroundColor: "#fff",
     headerColor: "#ddd",
     addImageColor: "#eee",
-    hoverBackgroundColor: "#ddd"
+    hoverBackgroundColor: "#ddd",
+    overlayColor: "rgba(0,0,0,0.7)",
+    buttonColor: "#ccc"
   },
   sizes: {
     xSmall: "0.25rem",
