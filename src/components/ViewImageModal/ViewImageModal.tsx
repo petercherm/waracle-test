@@ -14,13 +14,16 @@ export interface ViewImageModalProps {
 
 export const ViewImageModal = ({ imageUrl, onClose }: ViewImageModalProps) => {
   return (
-    <ViewImageModalOverlay>
+    <ViewImageModalOverlay data-testid="imageModal__overlay">
       <ViewImageModalContainer>
         <CloseButtonContainer>
-          <CloseButton onClick={onClose} />
+          <CloseButton
+            onClick={onClose}
+            data-testid="imageModal__button--close"
+          />
         </CloseButtonContainer>
         <ImageContainer>
-          <LargeImage src={imageUrl} />
+          <LargeImage src={imageUrl} data-testid="imageModal__image" />
         </ImageContainer>
       </ViewImageModalContainer>
     </ViewImageModalOverlay>

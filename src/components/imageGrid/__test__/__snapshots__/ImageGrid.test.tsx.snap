@@ -9,7 +9,7 @@ Object {
         Your cats - number of images: 2
       </p>
       <ul
-        class="sc-pGacB fJVTtY"
+        class="sc-jrAFXE iLimCB"
       >
         <li
           class="sc-jSgvzq gssyfx"
@@ -19,10 +19,15 @@ Object {
             class="sc-gKseQn jwVoyy"
           >
             <div
-              class="sc-iBPTik eQTGlk"
-            />
+              class="sc-iBPTik gLaBuZ"
+            >
+              <div
+                class="sc-fubCzh WLQNF"
+                role="button"
+              />
+            </div>
             <div
-              class="sc-fubCzh iEVAhe"
+              class="sc-pGacB ljFrZB"
             >
               <div
                 class="sc-dlfnuX hZvLBn"
@@ -98,10 +103,15 @@ Object {
             class="sc-gKseQn jwVoyy"
           >
             <div
-              class="sc-iBPTik eQTGlk"
-            />
+              class="sc-iBPTik gLaBuZ"
+            >
+              <div
+                class="sc-fubCzh WLQNF"
+                role="button"
+              />
+            </div>
             <div
-              class="sc-fubCzh iEVAhe"
+              class="sc-pGacB ljFrZB"
             >
               <div
                 class="sc-dlfnuX hZvLBn"
@@ -186,7 +196,7 @@ Object {
       Your cats - number of images: 2
     </p>
     <ul
-      class="sc-pGacB fJVTtY"
+      class="sc-jrAFXE iLimCB"
     >
       <li
         class="sc-jSgvzq gssyfx"
@@ -196,10 +206,15 @@ Object {
           class="sc-gKseQn jwVoyy"
         >
           <div
-            class="sc-iBPTik eQTGlk"
-          />
+            class="sc-iBPTik gLaBuZ"
+          >
+            <div
+              class="sc-fubCzh WLQNF"
+              role="button"
+            />
+          </div>
           <div
-            class="sc-fubCzh iEVAhe"
+            class="sc-pGacB ljFrZB"
           >
             <div
               class="sc-dlfnuX hZvLBn"
@@ -275,10 +290,15 @@ Object {
           class="sc-gKseQn jwVoyy"
         >
           <div
-            class="sc-iBPTik eQTGlk"
-          />
+            class="sc-iBPTik gLaBuZ"
+          >
+            <div
+              class="sc-fubCzh WLQNF"
+              role="button"
+            />
+          </div>
           <div
-            class="sc-fubCzh iEVAhe"
+            class="sc-pGacB ljFrZB"
           >
             <div
               class="sc-dlfnuX hZvLBn"

@@ -4,6 +4,7 @@
 
 - uploading the cat images
 - lisitng up to 50 of the uploaded images
+- viewing the images on click in the modal
 - favouriting and unfavouriting the uploaded images (supporting up to 10,000 votes)
 - upvoting and downvoting the images
 
@@ -37,11 +38,11 @@
 ## What is missing (which I would add if I had more time)
 
 - more tests (especially tests for sagas)
-- displaying the full-size image on click
 - deleting the images
 - better error handling and loading state (nicer animations etc.)
 - some action creators and saga helper functions could be wrapped in more generic functions to reduce the code repetition
 - some types could possibly be unified and made more generic
+- more consideration towards the SEO and accessibility
   
 ## Things to be aware of
 

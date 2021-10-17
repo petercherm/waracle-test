@@ -15,6 +15,10 @@ export const GlobalStyle = createGlobalStyle(({ theme }) => ({
     color: theme.colors.primaryTextColor,
     backgroundColor: theme.colors.backgroundColor,
     fontFamily: "Arial, Helvetica, sans-serif",
-    margin: 0
+    margin: 0,
+
+    ["&.no-scroll"]: {
+      overflow: "hidden"
+    }
   }
 }));

@@ -41,7 +41,8 @@ describe("GIVEN ImageGrid component", () => {
       isUploading: false,
       error: ""
     },
-    onUploadImage: jest.fn()
+    onUploadImage: jest.fn(),
+    onViewImage: jest.fn()
   };
 
   test("it matches the snapshot", () => {

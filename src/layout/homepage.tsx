@@ -51,10 +51,14 @@ export const Homepage = () => {
   };
 
   const handleViewImage = (imageUrl: string) => {
-    setViewImageUrl(imageUrl);
+    if (imageUrl) {
+      document.body.classList.add("no-scroll");
+      setViewImageUrl(imageUrl);
+    }
   };
 
   const handleViewImageClose = () => {
+    document.body.classList.remove("no-scroll");
     setViewImageUrl("");
   };
 

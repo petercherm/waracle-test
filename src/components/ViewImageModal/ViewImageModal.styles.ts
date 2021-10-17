@@ -1,7 +1,25 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
-export const ViewImageModalOverlay = styled.div(({ theme }) => ({
-  display: "flex",
+const overlayFadeInAnimation = keyframes`  
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+const modalZoomInAnimation = keyframes`  
+  from { transform: scale(0.5); }
+  to { transform: scale(1); }
+`;
+
+const AnimatedOverlay = styled.div`
+  animation: ${overlayFadeInAnimation} 0.5s ease-in-out;
+`;
+
+const AnimatedModal = styled.div`
+  animation: ${modalZoomInAnimation} 0.5s ease-in-out;
+`;
+
+export const ViewImageModalOverlay = styled(AnimatedOverlay)(({ theme }) => ({
+  display: "flex ",
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: theme.colors.overlayColor,
@@ -12,7 +30,7 @@ export const ViewImageModalOverlay = styled.div(({ theme }) => ({
   height: "100vh"
 }));
 
-export const ViewImageModalContainer = styled.div(({ theme }) => ({
+export const ViewImageModalContainer = styled(AnimatedModal)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
