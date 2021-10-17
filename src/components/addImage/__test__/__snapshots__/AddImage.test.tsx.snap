@@ -10,7 +10,7 @@ Object {
         data-testid="addImage__container"
       >
         <div
-          class="sc-gsTEea fZByWz"
+          class="sc-gsTEea gLUScE"
           role="button"
         />
       </li>
@@ -22,7 +22,7 @@ Object {
       data-testid="addImage__container"
     >
       <div
-        class="sc-gsTEea fZByWz"
+        class="sc-gsTEea gLUScE"
         role="button"
       />
     </li>
