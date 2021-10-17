@@ -33,19 +33,20 @@ export const ViewImageModalOverlay = styled(AnimatedOverlay)(({ theme }) => ({
 export const ViewImageModalContainer = styled(AnimatedModal)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-  width: "90vh",
+  justifyContent: "flex-start",
+  maxWidth: "90vw",
   maxHeight: "90vh",
   alignItems: "center",
   backgroundColor: theme.colors.backgroundColor,
-  margin: theme.sizes.medium
+  overflow: "hidden"
 }));
 
 export const CloseButtonContainer = styled.div(({ theme }) => ({
   display: "flex",
   justifyContent: "flex-end",
   alignSelf: "stretch",
-  padding: theme.sizes.medium
+  padding: theme.sizes.medium,
+  paddingBottom: 0
 }));
 
 export const CloseButton = styled.div.attrs({ role: "button" })(
@@ -53,8 +54,8 @@ export const CloseButton = styled.div.attrs({ role: "button" })(
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: theme.sizes.xLarge,
-    height: theme.sizes.xLarge,
+    width: theme.sizes.large,
+    height: theme.sizes.large,
     backgroundColor: theme.colors.buttonColor,
     borderRadius: "50%",
     cursor: "pointer",
@@ -70,6 +71,7 @@ export const CloseButton = styled.div.attrs({ role: "button" })(
 
     ["::before"]: {
       content: '"X"',
+      fontSize: theme.fontSizes.small,
       transition: "color 0.5s ease-in-out"
     }
   })
@@ -84,5 +86,5 @@ export const ImageContainer = styled.div(({ theme }) => ({
 }));
 
 export const LargeImage = styled.img({
-  width: "100%"
+  maxWidth: "100%"
 });
