@@ -61,11 +61,16 @@ export const CloseButton = styled.div.attrs({ role: "button" })(
     transition: "background-color 0.5s ease-in-out",
 
     [":hover"]: {
-      backgroundColor: theme.colors.hoverBackgroundColor
+      backgroundColor: theme.colors.hoverBackgroundColor,
+
+      ["::before"]: {
+        color: theme.colors.hightLightColor
+      }
     },
 
     ["::before"]: {
-      content: '"X"'
+      content: '"X"',
+      transition: "color 0.5s ease-in-out"
     }
   })
 );

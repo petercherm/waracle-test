@@ -43,6 +43,7 @@
 - some action creators and saga helper functions could be wrapped in more generic functions to reduce the code repetition
 - some types could possibly be unified and made more generic
 - more consideration towards the SEO and accessibility
+- proper error handling for the favourites and votes
   
 ## Things to be aware of
 

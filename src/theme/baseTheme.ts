@@ -4,7 +4,7 @@ export const baseTheme = {
   colors: {
     primaryTextColor: "#000",
     primaryColor: "#666",
-    hightLightColor: "#f00",
+    hightLightColor: "#900",
     backgroundColor: "#fff",
     headerColor: "#ddd",
     addImageColor: "#eee",
