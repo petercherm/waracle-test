@@ -48,7 +48,7 @@ const performFetch = () => {
   return api
     .get(`${process.env.REACT_APP_API_URL}${endpoints.VOTE}?limit=10000`)
     .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .catch((error) => returnError(error));
 };
 
 const performSet = (image_id: string, value: 0 | 1) => {
