@@ -10,26 +10,29 @@ Object {
         data-testid="imageModal__overlay"
       >
         <div
-          class="sc-gsTEea sc-hKgJUU eTXNCA hphdZx"
+          class="sc-gsTEea sc-hKgJUU eTXNCA eVMHRd"
         >
           <div
-            class="sc-eCstlR hqMLQb"
+            class="sc-jSgvzq kUQgdj"
           >
             <div
-              class="sc-jSgvzq kPnOsS"
+              class="sc-gKseQn igwTXU"
               data-testid="imageModal__button--close"
               role="button"
             />
           </div>
           <div
-            class="sc-gKseQn jFxhcb"
+            class="sc-iBPTik deNmyX"
           >
             <img
-              class="sc-iBPTik futNNC"
+              class="sc-fubCzh kbKCef"
               data-testid="imageModal__image"
               src="/test_url.jpg"
             />
           </div>
+          <div
+            class="sc-eCstlR iIaxiD"
+          />
         </div>
       </div>
     </div>
@@ -40,26 +43,29 @@ Object {
       data-testid="imageModal__overlay"
     >
       <div
-        class="sc-gsTEea sc-hKgJUU eTXNCA hphdZx"
+        class="sc-gsTEea sc-hKgJUU eTXNCA eVMHRd"
       >
         <div
-          class="sc-eCstlR hqMLQb"
+          class="sc-jSgvzq kUQgdj"
         >
           <div
-            class="sc-jSgvzq kPnOsS"
+            class="sc-gKseQn igwTXU"
             data-testid="imageModal__button--close"
             role="button"
           />
         </div>
         <div
-          class="sc-gKseQn jFxhcb"
+          class="sc-iBPTik deNmyX"
         >
           <img
-            class="sc-iBPTik futNNC"
+            class="sc-fubCzh kbKCef"
             data-testid="imageModal__image"
             src="/test_url.jpg"
           />
         </div>
+        <div
+          class="sc-eCstlR iIaxiD"
+        />
       </div>
     </div>
   </div>,

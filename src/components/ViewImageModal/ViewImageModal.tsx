@@ -1,4 +1,5 @@
 import {
+  BottomStripe,
   CloseButton,
   CloseButtonContainer,
   ImageContainer,
@@ -25,6 +26,7 @@ export const ViewImageModal = ({ imageUrl, onClose }: ViewImageModalProps) => {
         <ImageContainer>
           <LargeImage src={imageUrl} data-testid="imageModal__image" />
         </ImageContainer>
+        <BottomStripe />
       </ViewImageModalContainer>
     </ViewImageModalOverlay>
   );

@@ -32,6 +32,7 @@ export const ViewImageModalOverlay = styled(AnimatedOverlay)(({ theme }) => ({
 
 export const ViewImageModalContainer = styled(AnimatedModal)(({ theme }) => ({
   display: "flex",
+  position: "relative",
   flexDirection: "column",
   justifyContent: "flex-start",
   maxWidth: "90vw",
@@ -39,6 +40,14 @@ export const ViewImageModalContainer = styled(AnimatedModal)(({ theme }) => ({
   alignItems: "center",
   backgroundColor: theme.colors.backgroundColor,
   overflow: "hidden"
+}));
+
+export const BottomStripe = styled.div(({ theme }) => ({
+  width: "100%",
+  height: theme.sizes.medium,
+  backgroundColor: theme.colors.backgroundColor,
+  position: "absolute",
+  bottom: 0
 }));
 
 export const CloseButtonContainer = styled.div(({ theme }) => ({
