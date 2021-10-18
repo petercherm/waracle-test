@@ -4,7 +4,7 @@
 
 - uploading the cat images
 - listing up to 50 of the uploaded images
-- viewing the images on click in the modal
+- viewing the images in the modal on click
 - favouriting the uploaded images
 - upvoting and downvoting the images (supporting up to 10,000 votes)
 
