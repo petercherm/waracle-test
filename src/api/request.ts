@@ -57,12 +57,11 @@ export class Request {
   private getRequestParams(method: HttpMethod) {
     return {
       method,
-      mode: "cors" as RequestMode,
+      mode: "no-cors" as RequestMode,
       cache: "no-cache" as RequestCache,
-      credentials: "same-origin" as RequestCredentials,
+      credentials: "include" as RequestCredentials,
       redirect: "follow" as RequestRedirect,
       referrer: "no-referrer",
-      withCredentials: true,
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
