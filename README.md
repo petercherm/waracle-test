@@ -14,7 +14,6 @@
 - run `npm install`
 - run `npm start` (that will stary the dev build)
 - you can also run a production build by typing `npm run build` and then starting the server with `serve -s build` (`serve` needs to be installed in your system first)
-- please disable `CORS` in your browser
 
 ## Tech-Stack
 
@@ -61,7 +60,6 @@ Internet Explorer 11 support is doable, but it would require a few polyfills and
 - `TheCatApi` is not the greatest API out there. E.g. the votes are terrible for the purpose I need them in the app. The endpoints require the `limit` attribute to be set, otherwise, they only return a single item. That's a serious limitation as I need all the votes to calculate the score and the number of votes grows exponentially.
 - I have limited the number of images to **50** and the number of votes to **10,000**. For this reason, **PLEASE DO NOT USE THE DEMO API KEY** because the app will not work properly (the number of votes is astronomical and I only fetch 10,000). Please use my API KEY or get a fresh one.
 - I use saga to trigger the file uploads. This is not entirely correct, as actions should only contain serialised data, but I decided to make that exception to keep things nice and consistent.
-- the API returns no `Access-Control-Allow-Origin` header, so please make sure to disable the same-origin policy in your browser before running the project.
 
 ## Available Scripts
 
