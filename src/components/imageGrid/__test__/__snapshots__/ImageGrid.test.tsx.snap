@@ -9,28 +9,28 @@ Object {
         Your cats - number of images: 2
       </p>
       <ul
-        class="sc-jrAFXE iLimCB"
+        class="sc-jrQzAO fxVimg"
       >
         <li
-          class="sc-jSgvzq gssyfx"
+          class="sc-jRQBWg beENwz"
           data-testid="imageTile__container"
         >
           <div
-            class="sc-gKseQn jwVoyy"
+            class="sc-gKclnd bWxFwU"
           >
             <div
-              class="sc-iBPTik gLaBuZ"
+              class="sc-iCfMLu jneeXq"
             >
               <div
-                class="sc-fubCzh WLQNF"
+                class="sc-furwcr iyOglY"
                 role="button"
               />
             </div>
             <div
-              class="sc-pGacB ljFrZB"
+              class="sc-pVTFL hMxIcc"
             >
               <div
-                class="sc-dlfnuX hZvLBn"
+                class="sc-dkPtRN eAVpZv"
                 role="button"
               >
                 <svg
@@ -48,10 +48,10 @@ Object {
                 </svg>
               </div>
               <div
-                class="sc-eCstlR hGtvQl"
+                class="sc-eCImPb jReFbQ"
               >
                 <div
-                  class="sc-hKgJUU cGeifQ"
+                  class="sc-hKwDye dxGcGo"
                   role="button"
                 >
                   <svg
@@ -73,7 +73,7 @@ Object {
                   0
                 </span>
                 <div
-                  class="sc-hKgJUU jOGJDV"
+                  class="sc-hKwDye bmWGiJ"
                   role="button"
                 >
                   <svg
@@ -96,25 +96,25 @@ Object {
           </div>
         </li>
         <li
-          class="sc-jSgvzq gssyfx"
+          class="sc-jRQBWg beENwz"
           data-testid="imageTile__container"
         >
           <div
-            class="sc-gKseQn jwVoyy"
+            class="sc-gKclnd bWxFwU"
           >
             <div
-              class="sc-iBPTik gLaBuZ"
+              class="sc-iCfMLu jneeXq"
             >
               <div
-                class="sc-fubCzh WLQNF"
+                class="sc-furwcr iyOglY"
                 role="button"
               />
             </div>
             <div
-              class="sc-pGacB ljFrZB"
+              class="sc-pVTFL hMxIcc"
             >
               <div
-                class="sc-dlfnuX hZvLBn"
+                class="sc-dkPtRN eAVpZv"
                 role="button"
               >
                 <svg
@@ -132,10 +132,10 @@ Object {
                 </svg>
               </div>
               <div
-                class="sc-eCstlR hGtvQl"
+                class="sc-eCImPb jReFbQ"
               >
                 <div
-                  class="sc-hKgJUU cGeifQ"
+                  class="sc-hKwDye dxGcGo"
                   role="button"
                 >
                   <svg
@@ -157,7 +157,7 @@ Object {
                   0
                 </span>
                 <div
-                  class="sc-hKgJUU jOGJDV"
+                  class="sc-hKwDye bmWGiJ"
                   role="button"
                 >
                   <svg
@@ -180,11 +180,11 @@ Object {
           </div>
         </li>
         <li
-          class="sc-bdfBQB gfxQRn"
+          class="sc-bdvvtL cKPaES"
           data-testid="addImage__container"
         >
           <div
-            class="sc-gsTEea gLUScE"
+            class="sc-gsDKAQ hzCKtY"
             role="button"
           />
         </li>
@@ -196,28 +196,28 @@ Object {
       Your cats - number of images: 2
     </p>
     <ul
-      class="sc-jrAFXE iLimCB"
+      class="sc-jrQzAO fxVimg"
     >
       <li
-        class="sc-jSgvzq gssyfx"
+        class="sc-jRQBWg beENwz"
         data-testid="imageTile__container"
       >
         <div
-          class="sc-gKseQn jwVoyy"
+          class="sc-gKclnd bWxFwU"
         >
           <div
-            class="sc-iBPTik gLaBuZ"
+            class="sc-iCfMLu jneeXq"
           >
             <div
-              class="sc-fubCzh WLQNF"
+              class="sc-furwcr iyOglY"
               role="button"
             />
           </div>
           <div
-            class="sc-pGacB ljFrZB"
+            class="sc-pVTFL hMxIcc"
           >
             <div
-              class="sc-dlfnuX hZvLBn"
+              class="sc-dkPtRN eAVpZv"
               role="button"
             >
               <svg
@@ -235,10 +235,10 @@ Object {
               </svg>
             </div>
             <div
-              class="sc-eCstlR hGtvQl"
+              class="sc-eCImPb jReFbQ"
             >
               <div
-                class="sc-hKgJUU cGeifQ"
+                class="sc-hKwDye dxGcGo"
                 role="button"
               >
                 <svg
@@ -260,7 +260,7 @@ Object {
                 0
               </span>
               <div
-                class="sc-hKgJUU jOGJDV"
+                class="sc-hKwDye bmWGiJ"
                 role="button"
               >
                 <svg
@@ -283,25 +283,25 @@ Object {
         </div>
       </li>
       <li
-        class="sc-jSgvzq gssyfx"
+        class="sc-jRQBWg beENwz"
         data-testid="imageTile__container"
       >
         <div
-          class="sc-gKseQn jwVoyy"
+          class="sc-gKclnd bWxFwU"
         >
           <div
-            class="sc-iBPTik gLaBuZ"
+            class="sc-iCfMLu jneeXq"
           >
             <div
-              class="sc-fubCzh WLQNF"
+              class="sc-furwcr iyOglY"
               role="button"
             />
           </div>
           <div
-            class="sc-pGacB ljFrZB"
+            class="sc-pVTFL hMxIcc"
           >
             <div
-              class="sc-dlfnuX hZvLBn"
+              class="sc-dkPtRN eAVpZv"
               role="button"
             >
               <svg
@@ -319,10 +319,10 @@ Object {
               </svg>
             </div>
             <div
-              class="sc-eCstlR hGtvQl"
+              class="sc-eCImPb jReFbQ"
             >
               <div
-                class="sc-hKgJUU cGeifQ"
+                class="sc-hKwDye dxGcGo"
                 role="button"
               >
                 <svg
@@ -344,7 +344,7 @@ Object {
                 0
               </span>
               <div
-                class="sc-hKgJUU jOGJDV"
+                class="sc-hKwDye bmWGiJ"
                 role="button"
               >
                 <svg
@@ -367,11 +367,11 @@ Object {
         </div>
       </li>
       <li
-        class="sc-bdfBQB gfxQRn"
+        class="sc-bdvvtL cKPaES"
         data-testid="addImage__container"
       >
         <div
-          class="sc-gsTEea gLUScE"
+          class="sc-gsDKAQ hzCKtY"
           role="button"
         />
       </li>

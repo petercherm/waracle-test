@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <li
-        class="sc-bdfBQB gfxQRn"
+        class="sc-bdvvtL cKPaES"
         data-testid="addImage__container"
       >
         <div
-          class="sc-gsTEea gLUScE"
+          class="sc-gsDKAQ hzCKtY"
           role="button"
         />
       </li>
@@ -18,11 +18,11 @@ Object {
   </body>,
   "container": <div>
     <li
-      class="sc-bdfBQB gfxQRn"
+      class="sc-bdvvtL cKPaES"
       data-testid="addImage__container"
     >
       <div
-        class="sc-gsTEea gLUScE"
+        class="sc-gsDKAQ hzCKtY"
         role="button"
       />
     </li>

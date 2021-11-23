@@ -6,66 +6,60 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdfBQB sc-dlfnuX gTXIaP hgszrZ"
+        class="sc-bdvvtL sc-dkPtRN iYkkBi kZZWkh"
         data-testid="imageModal__overlay"
       >
         <div
-          class="sc-gsTEea sc-hKgJUU eTXNCA eVMHRd"
+          class="sc-gsDKAQ sc-hKwDye hkdxMk kELOfl"
         >
           <div
-            class="sc-jSgvzq kUQgdj"
+            class="sc-eCImPb eJJzMm"
           >
             <div
-              class="sc-gKseQn igwTXU"
+              class="sc-jRQBWg gGMIlY"
               data-testid="imageModal__button--close"
               role="button"
             />
           </div>
           <div
-            class="sc-iBPTik deNmyX"
+            class="sc-gKclnd llaENl"
           >
             <img
-              class="sc-fubCzh kbKCef"
+              class="sc-iCfMLu dhbpeV"
               data-testid="imageModal__image"
               src="/test_url.jpg"
             />
           </div>
-          <div
-            class="sc-eCstlR iIaxiD"
-          />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-bdfBQB sc-dlfnuX gTXIaP hgszrZ"
+      class="sc-bdvvtL sc-dkPtRN iYkkBi kZZWkh"
       data-testid="imageModal__overlay"
     >
       <div
-        class="sc-gsTEea sc-hKgJUU eTXNCA eVMHRd"
+        class="sc-gsDKAQ sc-hKwDye hkdxMk kELOfl"
       >
         <div
-          class="sc-jSgvzq kUQgdj"
+          class="sc-eCImPb eJJzMm"
         >
           <div
-            class="sc-gKseQn igwTXU"
+            class="sc-jRQBWg gGMIlY"
             data-testid="imageModal__button--close"
             role="button"
           />
         </div>
         <div
-          class="sc-iBPTik deNmyX"
+          class="sc-gKclnd llaENl"
         >
           <img
-            class="sc-fubCzh kbKCef"
+            class="sc-iCfMLu dhbpeV"
             data-testid="imageModal__image"
             src="/test_url.jpg"
           />
         </div>
-        <div
-          class="sc-eCstlR iIaxiD"
-        />
       </div>
     </div>
   </div>,
