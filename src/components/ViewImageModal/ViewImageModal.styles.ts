@@ -42,14 +42,6 @@ export const ViewImageModalContainer = styled(AnimatedModal)(({ theme }) => ({
   overflow: "hidden"
 }));
 
-export const BottomStripe = styled.div(({ theme }) => ({
-  width: "100%",
-  height: theme.sizes.medium,
-  backgroundColor: theme.colors.backgroundColor,
-  position: "absolute",
-  bottom: 0
-}));
-
 export const CloseButtonContainer = styled.div(({ theme }) => ({
   display: "flex",
   justifyContent: "flex-end",
@@ -94,6 +86,9 @@ export const ImageContainer = styled.div(({ theme }) => ({
   padding: theme.sizes.medium
 }));
 
-export const LargeImage = styled.img({
-  maxWidth: "100%"
-});
+export const LargeImage = styled.img<{ isPortrait: boolean }>(
+  ({ theme, isPortrait }) => ({
+    maxWidth: "100%",
+    ...(isPortrait && { maxHeight: `calc(80vh - ${theme.sizes.medium})` })
+  })
+);
