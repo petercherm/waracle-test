@@ -1,8 +1,4 @@
-import { ImageType } from "../../models/theCatApi/image.models";
-import { FetchStatus } from "../../store/rootAction";
-import { ApplicationState } from "../../store/rootReducer";
+import { RootState } from "../../store/createStore";
 
-export const getImages = (state: ApplicationState): ImageType[] =>
-  state.images.items;
-export const getImagesFetchStatus = (state: ApplicationState): FetchStatus =>
-  state.images.status;
+export const getImages = (state: RootState) => state.images.items;
+export const getImagesFetchStatus = (state: RootState) => state.images.status;

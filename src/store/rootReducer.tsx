@@ -12,5 +12,3 @@ export const rootReducer = combineReducers({
   favourites: favouritesReducer,
   votes: votesReducer
 });
-
-export type ApplicationState = StateType<ReturnType<typeof rootReducer>>;

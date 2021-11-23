@@ -1,6 +1,4 @@
-import { ApplicationState } from "../../store/rootReducer";
-import { Score, VotesStatus } from "./votesReducer";
+import { RootState } from "../../store/createStore";
 
-export const getVotes = (state: ApplicationState): Score => state.votes.items;
-export const getVotesStatus = (state: ApplicationState): VotesStatus =>
-  state.votes.status;
+export const getVotes = (state: RootState) => state.votes.items;
+export const getVotesStatus = (state: RootState) => state.votes.status;

@@ -1,8 +1,5 @@
-import { ApplicationState } from "../../store/rootReducer";
-import { FavouriteItem, FavouritesStatus } from "./favouritesReducer";
+import { RootState } from "../../store/createStore";
 
-export const getFavourites = (state: ApplicationState): FavouriteItem[] =>
-  state.favourites.items;
-export const getFavouritesStatus = (
-  state: ApplicationState
-): FavouritesStatus => state.favourites.status;
+export const getFavourites = (state: RootState) => state.favourites.items;
+export const getFavouritesStatus = (state: RootState) =>
+  state.favourites.status;

@@ -1,5 +1,3 @@
-import { UploadStatus } from "../../store/rootAction";
-import { ApplicationState } from "../../store/rootReducer";
+import { RootState } from "../../store/createStore";
 
-export const getImageUploadStatus = (state: ApplicationState): UploadStatus =>
-  state.upload.status;
+export const getImageUploadStatus = (state: RootState) => state.upload.status;
