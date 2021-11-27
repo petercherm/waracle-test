@@ -86,9 +86,7 @@ export const ImageContainer = styled.div(({ theme }) => ({
   padding: theme.sizes.medium
 }));
 
-export const LargeImage = styled.img<{ isPortrait: boolean }>(
-  ({ theme, isPortrait }) => ({
-    maxWidth: "100%",
-    ...(isPortrait && { maxHeight: `calc(80vh - ${theme.sizes.medium})` })
-  })
-);
+export const LargeImage = styled.img(({ theme }) => ({
+  maxWidth: "100%",
+  maxHeight: `calc(80vh - ${theme.sizes.medium})`
+}));

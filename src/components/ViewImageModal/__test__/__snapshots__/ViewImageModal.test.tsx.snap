@@ -25,7 +25,7 @@ Object {
             class="sc-gKclnd llaENl"
           >
             <img
-              class="sc-iCfMLu dhbpeV"
+              class="sc-iCfMLu gOGxJO"
               data-testid="imageModal__image"
               src="/test_url.jpg"
             />
@@ -55,7 +55,7 @@ Object {
           class="sc-gKclnd llaENl"
         >
           <img
-            class="sc-iCfMLu dhbpeV"
+            class="sc-iCfMLu gOGxJO"
             data-testid="imageModal__image"
             src="/test_url.jpg"
           />
